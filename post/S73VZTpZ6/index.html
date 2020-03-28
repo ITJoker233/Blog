@@ -180,13 +180,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1585385671272" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1585400928948" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1585385671272" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1585400928948" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -275,11 +275,11 @@
                                                     </span>&nbsp;•&nbsp;
 
                                                     <span class="post-readtime">阅读时间:
-                                            <a href="#">2.2分</a></span>
+                                            <a href="#">2.3分</a></span>
                                                     <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1585385671272" srcset="https://blog.itjoker.cn/images/avatar.png?v=1585385671272" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1585400928948" srcset="https://blog.itjoker.cn/images/avatar.png?v=1585400928948" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
                                             <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-03-28</span>
                                         </div>
@@ -289,20 +289,33 @@
                                 <div class="post-content-real">
                                     <pre><code class="language-python">from requests import post
 from requests import get
+import time
 import re
 
-relist = []
+
+host = 'https://www.example.com'
+headers = {
+    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Referer':'https://www.example.com',
+    'Accept-Encoding': 'utf-8',
+    'Connection':'keep-alive',
+    'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100100 Firefox/74.0',
+    'Content-Type':'application/x-www-form-urlencoded',
+    'Cookie':'',
+    }
 def getSchool():
     schoolList = {}
     schoolList['num'] = []
     schoolList['name'] = []
     schoolList['school'] = {}
-    url = 'https://www.example.com'
-    response = get(url)
+    url = '{0}/xxx'.format(host)
+    response = get(url,headers)
     data_pattern = r'&lt;select name=&quot;yxh&quot; id=&quot;yxh&quot;&gt;(.*?)&lt;/select&gt;'
     raw_data = response.text.replace('\r\n','').replace('\t','')
     data = re.findall(data_pattern,raw_data)[0]
     school_no_pattern = '&lt;option value=\&quot;(.*?)\&quot; &gt;'
+
     school_name_pattern = '&lt;option value=&quot;{0}&quot; &gt;(.*?)&lt;/option&gt;'
     false_name = '---请选择---'
     for no in re.findall(school_no_pattern,data):
@@ -320,57 +333,41 @@ def getSchool():
 def getNum(school_num,school_name):
     if (school_num == &quot;&quot;):
         return
-    query_url ='https://www.example.com'
-    re = ''
-    no = 8000
-    reOne = 0
-    front = school_num
-    frontNo = 10000
-    frontNum = int(front) * 100000
+    query_url ='{0}/xxx'.format(host)
+    num = int(9999)
+    current_num = 0
+    frontNum = int(school_num) * 100000
     sum_ = 0
     while(True):
-        payload = 'kslx0=0&amp;userid='+ str(frontNum + reOne + no)
-        response = post(query_url,payload)
+        payload = 'kslx0=0&amp;userid='+ str(frontNum  + current_num + num)
+        response = post(query_url,data = payload,headers = headers)
+        time.sleep(1)
         if '考生号错误' in response.text:
-            no /= 2
+            num /= 2
+            num = int(num)
         else:
-            reOne += no
-        if (no == 0):
-            break
-    re += str(school_num) + school_name
-    for i in range(0,int((14 - len(school_name) + 3) / 4) ):
-        re += &quot;\t&quot;
-    if ((14 - len(school_name) + 3) / 4 == 1 and (14 - len(school_name)) == 4):
-        re += &quot;\t&quot;
-    re += &quot;\t一月报名：&quot; + str(reOne)
-    re += &quot;\t一月报名：&quot; + str(reOne)
-    print(str(school_num) + school_name)
-    print(&quot;一月报名：&quot; + str(reOne))
-    sum_ += reOne
-    no = 8000
-    frontNo = 10000
-    while (True):
-        payload = 'kslx0=0&amp;userid='+ str(front + str(frontNo + no))
-        response = post(query_url,payload)
-        if '考生号错误' in response.text:
-            no /= 2
-        else:
-            reOne += no
-        if (no == 0):
-            break
-    re += &quot;\t三月报名：&quot; + str(frontNo - 10000)
-    print(&quot;三月报名：&quot; + str(frontNo - 10000))
-    sum_ += frontNo - 10000
-    print(&quot;总人数：&quot; + str(sum_))
-    re += &quot;\t总人数：&quot; + str(sum_)
-    relist.append(re)
+            current_num = num
+            sum_ = num
+            num += 1
+            payload = 'kslx0=0&amp;userid='+ str(frontNum  + current_num + num)
+            response = post(query_url,data = payload,headers = headers)
+            if '考生号错误' in response.text:
+                num /= 2
+                num = int(num)
+                return (&quot;{0} {1} 报名人数：{2}&quot; .format(school_name,school_num,str(sum_)))
+                break;
+            else:
+                pass
+        if(num == 0):
+            break     
+    return
 
 def main():
     schoolList = getSchool()
     school_name_list = schoolList['name']
     for school_name in school_name_list:
         print('正在获取: {0} ...'.format(school_name))
-        getNum(schoolList['school'][school_name],school_name)
+        print(getNum(schoolList['school'][school_name],school_name))
 main()
 </code></pre>
 
@@ -427,8 +424,8 @@ main()
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
                 <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/S73VZTpZ6/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=qzone&title=关于获取某省专插本录取人数的代码&pics=https://blog.itjoker.cn/images/avatar.png?v=1585385671272&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=weibo&title=关于获取某省专插本录取人数的代码 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1585385671272"><i class="fa fa-weibo "></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=qzone&title=关于获取某省专插本录取人数的代码&pics=https://blog.itjoker.cn/images/avatar.png?v=1585400928948&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=weibo&title=关于获取某省专插本录取人数的代码 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1585400928948"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                     
@@ -714,7 +711,7 @@ main()
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1585385671272
+        1585400928948
     </div>
     <script>
         var titleTime;
