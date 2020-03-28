@@ -180,13 +180,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1585382580603" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1585385671272" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1585382580603" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1585385671272" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -275,11 +275,11 @@
                                                     </span>&nbsp;•&nbsp;
 
                                                     <span class="post-readtime">阅读时间:
-                                            <a href="#">2.3分</a></span>
+                                            <a href="#">2.2分</a></span>
                                                     <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1585382580603" srcset="https://blog.itjoker.cn/images/avatar.png?v=1585382580603" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1585385671272" srcset="https://blog.itjoker.cn/images/avatar.png?v=1585385671272" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
                                             <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-03-28</span>
                                         </div>
@@ -297,7 +297,7 @@ def getSchool():
     schoolList['num'] = []
     schoolList['name'] = []
     schoolList['school'] = {}
-    url = 'https://www.xxx.com/xxxx'
+    url = 'https://www.example.com'
     response = get(url)
     data_pattern = r'&lt;select name=&quot;yxh&quot; id=&quot;yxh&quot;&gt;(.*?)&lt;/select&gt;'
     raw_data = response.text.replace('\r\n','').replace('\t','')
@@ -320,7 +320,7 @@ def getSchool():
 def getNum(school_num,school_name):
     if (school_num == &quot;&quot;):
         return
-    query_url ='https://www.xxx.com/xxxx'
+    query_url ='https://www.example.com'
     re = ''
     no = 8000
     reOne = 0
@@ -334,12 +334,11 @@ def getNum(school_num,school_name):
         if '考生号错误' in response.text:
             no /= 2
         else:
-            print(str(frontNum + reOne + no))
             reOne += no
         if (no == 0):
             break
     re += str(school_num) + school_name
-    for i in range(0,(14 - len(school_name) + 3) / 4 ):
+    for i in range(0,int((14 - len(school_name) + 3) / 4) ):
         re += &quot;\t&quot;
     if ((14 - len(school_name) + 3) / 4 == 1 and (14 - len(school_name)) == 4):
         re += &quot;\t&quot;
@@ -351,12 +350,11 @@ def getNum(school_num,school_name):
     no = 8000
     frontNo = 10000
     while (True):
-        payload = 'kslx0=0&amp;userid='+ str(front + (frontNo + no))
+        payload = 'kslx0=0&amp;userid='+ str(front + str(frontNo + no))
         response = post(query_url,payload)
         if '考生号错误' in response.text:
             no /= 2
         else:
-            print(str(frontNum + reOne + no))
             reOne += no
         if (no == 0):
             break
@@ -374,7 +372,6 @@ def main():
         print('正在获取: {0} ...'.format(school_name))
         getNum(schoolList['school'][school_name],school_name)
 main()
-print(relist)
 </code></pre>
 
                                 </div>
@@ -430,8 +427,8 @@ print(relist)
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
                 <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/S73VZTpZ6/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=qzone&title=关于获取某省专插本录取人数的代码&pics=https://blog.itjoker.cn/images/avatar.png?v=1585382580603&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=weibo&title=关于获取某省专插本录取人数的代码 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1585382580603"><i class="fa fa-weibo "></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=qzone&title=关于获取某省专插本录取人数的代码&pics=https://blog.itjoker.cn/images/avatar.png?v=1585385671272&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/S73VZTpZ6/&sharesource=weibo&title=关于获取某省专插本录取人数的代码 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1585385671272"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                     
@@ -717,7 +714,7 @@ print(relist)
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1585382580603
+        1585385671272
     </div>
     <script>
         var titleTime;
