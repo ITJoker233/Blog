@@ -135,7 +135,7 @@ textarea {
 .message-info {
     background: rgba(17, 17, 17, .9);
     color: #fff;
-    border-radius: 2px;
+    border-radius: 5px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.35);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.35);
     display: inline-block;
@@ -2294,7 +2294,7 @@ button[data-content] {
 }
 
 [data-content-pos=right]:after {
-    margin-left: 11px
+    margin-left: 11px;
 }
 
 [data-content-pos=right]:before {
