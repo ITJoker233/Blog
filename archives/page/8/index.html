@@ -195,13 +195,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1587087284750" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1587117791339" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1587087284750" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1587117791339" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -550,19 +550,22 @@ function isDateBetween(start, end) {
     var startDate = new Date(start)
     var endDate = new Date(end)
     var current = new Date()
-
     return current >= startDate && current < endDate
 }
-
-var inGrayRange = isDateBetween('2020-04-04 00:00:00', '2020-04-05 00:00:00');
 var bg = $('#bg')
-window.inGrayRange = inGrayRange;
-if (!inGrayRange && bg) {
-    bg.removeClass('gray')
-    createMessage("欢迎来到我的Blog( •̀ .̫ •́ )✧🎉", 3000)
-} else {
-    bg.addClass('gray')
-    createMessage("逝世的同胞、英雄一路走好!🙏", 3000)
+var myDate = new Date;
+var mon = myDate.getMonth() + 1;
+var date = myDate.getDate();
+var days = ['4.4', '5.12', '7.7', '9.18', '12.13'];
+for (var day of days) {
+    var d = day.split('.');
+    if (mon == d[0] && date == d[1]) {
+        bg.addClass('gray')
+        createMessage("逝世的同胞、英雄一路走好!🙏", 3000)
+    } else {
+        bg.removeClass('gray')
+        createMessage("欢迎来到我的Blog( •̀ .̫ •́ )✧🎉", 3000)
+    }
 }
 </script>
 <!--<img src="https://ipcounter.ihcr.top" alt="标准开头.png" loading="lazy" width="500" height="500 ">-->
@@ -603,7 +606,7 @@ if (!inGrayRange && bg) {
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1587087284750
+        1587117791339
     </div>
     <script>
         var titleTime;
