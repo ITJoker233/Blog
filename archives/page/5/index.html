@@ -27,7 +27,7 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/js/Card/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.28/CDN/js/Card/script.js"></script>
 <!--<script async src="https://blog.itjoker.cn/media/js/script.min.js"></script>-->
 <!--<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />-->
 <link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
@@ -195,13 +195,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1587117791339" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1587119772344" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1587117791339" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1587119772344" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -578,30 +578,11 @@
     <a id="back-to-top" href="#"><i class="Card Card-top"></i></a>
     <div class="copyright">
         <script>
-function isDateBetween(start, end) {
-    var startDate = new Date(start)
-    var endDate = new Date(end)
-    var current = new Date()
-    return current >= startDate && current < endDate
-}
-var bg = $('#bg')
-var myDate = new Date;
-var mon = myDate.getMonth() + 1;
-var date = myDate.getDate();
-var days = ['4.4', '5.12', '7.7', '9.18', '12.13'];
-for (var day of days) {
-    var d = day.split('.');
-    if (mon == d[0] && date == d[1]) {
-        bg.addClass('gray')
-        createMessage("逝世的同胞、英雄一路走好!🙏", 3000)
-    } else {
-        bg.removeClass('gray')
-        createMessage("欢迎来到我的Blog( •̀ .̫ •́ )✧🎉", 3000)
-    }
-}
+App.recallMemory();
+App.weather();
+
 </script>
 <!--<img src="https://ipcounter.ihcr.top" alt="标准开头.png" loading="lazy" width="500" height="500 ">-->
-<script>     (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));     window.SeniverseWeatherWidget('show', {       flavor: "slim",       location: "WWEFQFPJZ7T8",       geolocation: true,       language: "auto",       unit: "c",       theme: "auto",       token: "61bcc333-3305-4728-9465-6785274bb0a3",       hover: "enabled",       container: "tp-weather-widget"     })   </script>
 <div style="display:none"><a href="https://nmsl.sbjxw.网址"></a></div>
             
 
@@ -638,7 +619,7 @@ for (var day of days) {
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1587117791339
+        1587119772344
     </div>
     <script>
         var titleTime;
@@ -651,6 +632,7 @@ for (var day of days) {
         
         App.hitokoto();
         
+        App.clearLog();
         App.outputlog();
         var logo = '%c💤ITJoker\'%cBlog';
         console.info(
