@@ -42,9 +42,10 @@ App = {
     },
     outputlog: function() {
         var newDate = new Date();
-        var timestamp = document.getElementById('UpdateTime').innerHTML;
+        //var timestamp = document.getElementById('UpdateTime').innerHTML;
+        var timestamp = document.getElementsByTagName('meta')['UpdateTime'].content;
         newDate.setTime(timestamp);
-        console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+        console.log(" %c Blog Update Time: " + newDate.toLocaleDateString() + " ", "color: #ffffff; background: #0092ee; padding:5px 0;border-radius:5px;");
         console.log("\n %c \u26a1Theme:Card Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
     },
     hitokoto: function() { //一言

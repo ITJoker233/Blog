@@ -20,6 +20,9 @@
 <meta name="author" content="💤ITJoker">
 <meta name="description" content="Be brave no matter what your life is like to you.">
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1588432216906">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/css/Card/prism.min.css" />
@@ -27,7 +30,7 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.28/CDN/js/Card/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.30/CDN/js/Card/script.min.js"></script>
 <!--<script async src="https://blog.itjoker.cn/media/js/script.min.js"></script>-->
 <!--<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />-->
 <link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
@@ -100,22 +103,28 @@
                             opacity: 1;
                         }
                         
-                        #span_btn:hover {
+                        .lite-item {
+                            background-color: #fff;
+                        }
+                        
+                        #spnBtn:hover {
                             transition: all .3s ease;
                             color: #fff;
                             background: #0092ee;
                             /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
                         }
                         
-                        #span_btn {
+                        #spnBtn {
+                            background-color: #fcfcfc;
                             font-size: 14px;
+                            transition: all .3s ease;
                         }
                         
                         .link_a:hover {
                             margin-top: 10px;
                             margin-bottom: 10px;
                             color: #fff;
-                            border-left: 8px solid #0092eeee;
+                            border-left: 8px solid #1976d2;
                             padding: 5px;
                             transition: all .3s ease;
                         }
@@ -195,13 +204,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1588428616093" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1588432216906" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1588428616093" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1588432216906" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -312,7 +321,7 @@
                                     <article class="post post-type">
                                         <header class="post-type-header">
                                             <div class="post-relative">
-                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                 <span class="post-type-author">
                     💤ITJoker
                     <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -348,10 +357,10 @@
                                             </div>
                                         </div>
                                         <div class="post-footer">
-                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/605dIl4Tn/'">
+                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/605dIl4Tn/'">
                     <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                 </span>
-                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/605dIl4Tn/')">
+                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/605dIl4Tn/')">
                     <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                 </span>
                                         </div>
@@ -391,7 +400,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -433,10 +442,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/S73VZTpZ6/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/S73VZTpZ6/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/S73VZTpZ6/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/S73VZTpZ6/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -449,7 +458,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -491,10 +500,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/j1YZQDjvM/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/j1YZQDjvM/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/j1YZQDjvM/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/j1YZQDjvM/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -507,7 +516,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -534,10 +543,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/hs0cOfrTf/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/hs0cOfrTf/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/hs0cOfrTf/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/hs0cOfrTf/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -550,7 +559,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -585,10 +594,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/w2wHYH_2x/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/w2wHYH_2x/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/w2wHYH_2x/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/w2wHYH_2x/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -601,7 +610,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -628,10 +637,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/F35Qn5hYr/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/F35Qn5hYr/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/F35Qn5hYr/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/F35Qn5hYr/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -644,7 +653,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -673,10 +682,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/D_MFXvGix/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/D_MFXvGix/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/D_MFXvGix/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/D_MFXvGix/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -689,7 +698,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -716,10 +725,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/iCBxLUOlf/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/iCBxLUOlf/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/iCBxLUOlf/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/iCBxLUOlf/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -732,7 +741,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -770,10 +779,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/FR9y3QAlN/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/FR9y3QAlN/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/FR9y3QAlN/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/FR9y3QAlN/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -786,7 +795,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -823,10 +832,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/rWnHzwpRi/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/rWnHzwpRi/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/rWnHzwpRi/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/rWnHzwpRi/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -839,7 +848,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -878,10 +887,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/VhQK5Ujks/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/VhQK5Ujks/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/VhQK5Ujks/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/VhQK5Ujks/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -894,7 +903,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -929,10 +938,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/Npfilgn2i/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/Npfilgn2i/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/Npfilgn2i/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/Npfilgn2i/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -945,7 +954,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -987,10 +996,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/FjQt8WN2i/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/FjQt8WN2i/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/FjQt8WN2i/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/FjQt8WN2i/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1003,7 +1012,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1045,10 +1054,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/alBgdRq8q/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/alBgdRq8q/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/alBgdRq8q/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/alBgdRq8q/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1061,7 +1070,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1101,10 +1110,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/yBkxDAdKK/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/yBkxDAdKK/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/yBkxDAdKK/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/yBkxDAdKK/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1117,7 +1126,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1152,10 +1161,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/S6t2Gj2aq/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/S6t2Gj2aq/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/S6t2Gj2aq/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/S6t2Gj2aq/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1168,7 +1177,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1203,10 +1212,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/Uj1ZHyFt9/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/Uj1ZHyFt9/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/Uj1ZHyFt9/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/Uj1ZHyFt9/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1219,7 +1228,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1261,10 +1270,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/zXB6J1yv_/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/zXB6J1yv_/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/zXB6J1yv_/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/zXB6J1yv_/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1277,7 +1286,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1312,10 +1321,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/azQ6rNbFG/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/azQ6rNbFG/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/azQ6rNbFG/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/azQ6rNbFG/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1330,7 +1339,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1373,10 +1382,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/7NmHOKo_h/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/7NmHOKo_h/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/7NmHOKo_h/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/7NmHOKo_h/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1389,7 +1398,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1424,10 +1433,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/859FVOsEl/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/859FVOsEl/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/859FVOsEl/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/859FVOsEl/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1442,7 +1451,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1477,10 +1486,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/a-uhd40dh/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/a-uhd40dh/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/a-uhd40dh/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/a-uhd40dh/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1493,7 +1502,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1528,10 +1537,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/h2bN0D-0F/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/h2bN0D-0F/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/h2bN0D-0F/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/h2bN0D-0F/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1544,7 +1553,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1579,10 +1588,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/LQmQeQqsZ/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/LQmQeQqsZ/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/LQmQeQqsZ/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/LQmQeQqsZ/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1595,7 +1604,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1637,10 +1646,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/YqHc8Ce_N/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/YqHc8Ce_N/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/YqHc8Ce_N/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/YqHc8Ce_N/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1653,7 +1662,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1700,10 +1709,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/uOKNMcsF_/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/uOKNMcsF_/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/uOKNMcsF_/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/uOKNMcsF_/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1716,7 +1725,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1765,10 +1774,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/rVpAR2dmO/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/rVpAR2dmO/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/rVpAR2dmO/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/rVpAR2dmO/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1781,7 +1790,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1816,10 +1825,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/07jUaFw0O/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/07jUaFw0O/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/07jUaFw0O/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/07jUaFw0O/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1832,7 +1841,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1874,10 +1883,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/wxMvtfkfT/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/wxMvtfkfT/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/wxMvtfkfT/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/wxMvtfkfT/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1890,7 +1899,7 @@
                                                     <article class="post post-type">
                                                         <header class="post-type-header">
                                                             <div class="post-relative">
-                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588428616093" class="avatar avatar-100 photo" width="100" height="100">
+                                                                <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" srcset="https://blog.itjoker.cn/images/avatar.png?v=1588432216906" class="avatar avatar-100 photo" width="100" height="100">
                                                                 <span class="post-type-author">
                                 💤ITJoker
                                 <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
@@ -1932,10 +1941,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-footer">
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/L5LAVbpAU/'">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:top.location='https://blog.itjoker.cn/post/L5LAVbpAU/'">
                                 <i class="Card Card-more-o"></i> &#x9605;&#x8BFB;
                             </span>
-                                                            <span id="span_btn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/L5LAVbpAU/')">
+                                                            <span id="spnBtn" style="text-align: center;" onclick="javascript:window.open('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/L5LAVbpAU/')">
                                 <i class=" Card Card-share "></i> &#x4E8C;&#x7EF4;&#x7801;&#x5206;&#x4EAB;
                             </span>
                                                         </div>
@@ -1950,7 +1959,7 @@
         
             <li class="lite-item">
                 <header class="lite-item-header">
-                    <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
                 </header>
                 <div class="textwidget">
                     <p>
@@ -1962,7 +1971,7 @@
                 <!--
                 <li class="lite-item">
                     <header class="lite-item-header">
-                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
                     </header>
                     <div class="textwidget">
                         
@@ -1974,7 +1983,7 @@
                 </li>-->
                 <li class="lite-item">
                     <header class="lite-item-header">
-                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
                     </header>
                     <div class="textwidget">
                         <div id='tags' style="height: auto;width: 360;"></div>
@@ -2037,9 +2046,9 @@
                                     entries: entries, //数据
                                     width: 300, //宽度
                                     height: 300, //高度
-                                    radius: '5%',
-                                    radiusMin: 75,
-                                    bgDraw: true, //是否显示背景
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
                                     bgColor: '#fff', //背景颜色
                                     opacityOver: 1.00,
                                     opacityOut: 0.05,
@@ -2079,13 +2088,13 @@
                     
                         <li class="lite-item">
                             <header class="lite-item-header">
-                                <h3 class="sidebar-default-icon lite-item-title">
+                                <h3 class="lite-item-title">
                                     &#x1F3B5;&#x97F3;&#x4E50;
                                 </h3>
                             </header>
                             <div class="textwidget">
                                 <p>
-                                    <div id="player_box"></div>
+                                    <div id="playerbox"></div>
                                 </p>
                             </div>
                         </li>
@@ -2124,7 +2133,7 @@
                                     
                                     
                                     const ap = new APlayer({
-                                        container: document.getElementById('player_box'),
+                                        container: document.getElementById('playerbox'),
                                         audio: music_array
                                     });
                                     
@@ -2138,7 +2147,7 @@
                                     </script>
                                     <li class="lite-item">
                                         <header class="lite-item-header">
-                                            <h3 class="sidebar-default-icon lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
                                         </header>
                                         <div class="textwidget">
                                             <div id="tp-weather-widget"></div>
@@ -2150,7 +2159,7 @@
                                                 
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
+                                                            <h3 class="lite-item-title">
                                                                 😀此乃付费主题 Card
                                                             </h3>
                                                         </header>
@@ -2163,7 +2172,7 @@
                                                     
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
+                                                            <h3 class="lite-item-title">
                                                                 😭求职信息
                                                             </h3>
                                                         </header>
@@ -2176,7 +2185,7 @@
                                                     
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
+                                                            <h3 class="lite-item-title">
                                                                 📢广告招标位
                                                             </h3>
                                                         </header>
@@ -2190,7 +2199,7 @@
                                                         
                                                             <li class="lite-item">
                                                                 <header class="lite-item-header">
-                                                                    <h3 class="sidebar-default-icon lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
                                                                 </header>
                                                                 <div class="textwidget">
                                                                     
@@ -2287,7 +2296,9 @@ is about to happen</a></span></p>
 App.recallMemory();
 </script>
 <!--<img src="https://ipcounter.ihcr.top" alt="标准开头.png" loading="lazy" width="500" height="500 ">-->
-<div style="display:none"><a href="https://nmsl.sbjxw.网址"></a></div>
+<div style="display:none">
+    <a href="https://nmsl.sbjxw.网址"></a>
+</div>
             
                 <div style="width:300px;margin:0 auto; padding:0px 0;">
                     <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31415926535898" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
@@ -2321,9 +2332,6 @@ App.recallMemory();
                             <a href="https://github.com/" target="_blank">
                                 Github
                             </a>
-    </div>
-    <div id='UpdateTime' style='display:none'>
-        1588428616093
     </div>
     <script>
         var titleTime;
