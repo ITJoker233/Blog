@@ -281,22 +281,20 @@
                     <article class="post post-type real-post">
                         <header class="post-type-header">
                             
-                                <div class="thumbnail-link" style="background-image: url('https://open.saintic.com/api/bingPic/')"></div>
-                                
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
                                         <div class="thumbnail-shadow">
                                             <h1 class="post-title">
-                                                关于&#34;菠菜&#34;站，BBin视讯的连接方式分析...
+                                                关于如何抢到半佛仙人的支付宝红包方法？✔
                                             </h1>
                                             <div class="post-info">
                                                 <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            <a href="https://blog.itjoker.cn/tag/VY0G11VFN/" rel="category">安全</a>
-                                            
                                     </span>
                                                 <span class="post-view">
                                                     
                                                         &nbsp;•&nbsp;
-                                                    <span id="/post/859FVOsEl/" class="leancloud_visitors" data-flag-title="关于&#34;菠菜&#34;站，BBin视讯的连接方式分析...">
+                                                    <span id="/post/7kGrr_X9l/" class="leancloud_visitors" data-flag-title="关于如何抢到半佛仙人的支付宝红包方法？✔">
                                                 <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
                                                 <i class="leancloud-visitors-count">0</i>
                                             </span>
@@ -305,19 +303,124 @@
                                                         </span>&nbsp;•&nbsp;
 
                                                         <span class="post-readtime">阅读时间:
-                                            <a href="#">0.1分</a></span>
+                                            <a href="#">3.2分</a></span>
                                                         <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
                                             <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1593103376422" srcset="https://blog.itjoker.cn/images/avatar.png?v=1593103376422" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
-                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2019-12-31</span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-06-26</span>
                                         </div>
                         </header>
                         <div class="post-main post-type-main">
                             <div class="post-content">
                                 <div class="post-content-real">
-                                    <h1 id="目前没有什么慢慢等吧我整理完再发-这是个预告">目前没有什么，慢慢等吧....我整理完再发。这是个预告...🙄</h1>
+                                    <h1 id="0x01-前言">0x01 前言</h1>
+<p>每次打开b站发现半佛老师发的神秘代码都早已被抢完，于是气不过，看了一下半佛老师以往发的动态，寻求规律。emmmm，我看用脚本去获取神秘代码应该可行。<br>
+<img src="https://blog.itjoker.cn/post-images/1593101781573.jpg" alt="" loading="lazy"><br>
+因此接着看下面具体分析。</p>
+<!-- more -->
+<h1 id="0x02-具体分析">0x02 具体分析</h1>
+<p>每次看到半佛老师发送的神秘代码都是这样的格式：【这段文本表示神秘代码的音译】<br>
+因此，我们首要的问题就是如何获取这个神秘代码呢？<br>
+我通过简单的抓包，搜索关键词：代码，找到疑似B站的Api。<br>
+<img src="https://blog.itjoker.cn/post-images/1593102239115.jpg" alt="" loading="lazy"><br>
+双击打开这个链接，如下图，找到神秘代码的位置<br>
+<img src="https://blog.itjoker.cn/post-images/1593102362376.jpg" alt="" loading="lazy"><br>
+确定该接口为获取Bilibili动态消息的Api无误。<img src="https://blog.itjoker.cn/post-images/1593102474602.gif" alt="" loading="lazy"><br>
+于是，这个接口为:</p>
+<blockquote>
+<p>https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?host_uid=半佛仙人的UID&amp;offset_dynamic_id=0&amp;need_top=1</p>
+</blockquote>
+<p>(中间的半佛仙人的UID可以替换成任意B站账号的UID)<br>
+以上接口都有了，返回的数据格式是json。<br>
+那么最后的问题就是，如何把半佛老师的发的神秘代码转换为数字呢？<br>
+<img src="https://blog.itjoker.cn/post-images/1593102704268.png" alt="" loading="lazy"><br>
+毕竟大家都是从老婆手里拿零花钱的人（🐶）<br>
+<img src="https://blog.itjoker.cn/post-images/1593102735347.jpg" alt="" loading="lazy"><br>
+所以一顿操作猛如虎，结果非常amazing啊，找到了一个现成库<code>pypinyin</code>（其实就是面向搜索引擎编程，雾）<img src="https://blog.itjoker.cn/post-images/1593102965513.gif" alt="" loading="lazy"><br>
+所以最后胡乱操作一下，就有了以下代码。</p>
+<h1 id="0x03-代码部分">0x03 代码部分</h1>
+<pre><code class="language-python">import requests
+import re,json
+from pypinyin import lazy_pinyin, Style
+# Needs Module: requests , pypinyin
+headers = {
+    'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+    'Accept-Encoding':'utf-8'
+}
+# Author:ITJoker
+# Blog:https://blog.itjoker.cn
+# Time:2020/06/26 00点37分
+dict_ = {}
+dict_['lin'] = '0'
+dict_['ling'] = '0'
+dict_['don'] = '0'
+dict_['dong'] = '0'
+dict_['nin'] = '1'
+dict_['ning'] = '1'
+dict_['yi'] = '1'
+dict_['yao'] = '1'
+dict_['ai'] = '2'
+dict_['er'] = '2'
+dict_['san'] = '3'
+dict_['sang'] = '3'
+dict_['shan'] = '3'
+dict_['shang'] = '3'
+dict_['si'] = '4'
+dict_['shi'] = '4'
+dict_['wu'] = '5'
+dict_['liu'] = '6'
+dict_['qi'] = '7'
+dict_['ba'] = '8'
+dict_['fa'] = '8'
+dict_['jiu'] = '9'
+dict_['qiu'] = '9'
+
+def removeNum(data):
+    pattern = r'[a-zA-Z]'
+    return ''.join(re.findall(pattern,data))
+
+def getPinyin(data):
+    style  =  Style.TONE3
+    return lazy_pinyin(data,style=style)
+
+def pinyinToNum(data):
+    pinyin_ =getPinyin(data)
+    result = ''
+    for item in pinyin_:
+        if removeNum(item) in dict_:
+            result += dict_[removeNum(item)]
+    if len(result) == 8:
+        return (u'结果:{0}'.format(result))
+    else:
+        print(u'根据情况请添加相应的字典')
+        return (u'中文:{0}\n结果:{1}'.format(data,result))
+
+def getDynamic(host_uid):
+    url = 'https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?host_uid={0}&amp;offset_dynamic_id=0&amp;need_top=1'.format(host_uid)
+    return requests.get(url,headers=headers).json()
+
+def getLotteryCode(data):
+    pattern = r'【(.*?)】'
+    return ''.join(re.findall(pattern,data))
+
+uid = 37663924 #半佛仙人B站Uid
+lottery_code_raw = ''
+if __name__ == &quot;__main__&quot;:
+    raw_data = getDynamic(uid)
+    response = json.loads(raw_data['data']['cards'][0]['card'])['item']
+    if response['uid'] == uid:
+        lottery_code_raw = getLotteryCode(response['content'].replace('\r',''))
+        if lottery_code_raw != '':
+            count = 0 
+            lottery_Code_list = list(filter(None, lottery_code_raw.split(' '))) 
+            for lottery_code in lottery_Code_list:
+                print(u'第{0}个\n{1}'.format(count+1,pinyinToNum(lottery_code)))
+                count += 1
+</code></pre>
+<p>看到这里了，网络乞丐在线乞讨，给点赞助呗？~<br>
+<img src="https://blog.itjoker.cn/post-images/1593102735347.jpg" alt="" loading="lazy"></p>
 
                                 </div>
                             </div>
@@ -335,8 +438,8 @@
                             <div class="post-copyright">
                                 作者:
                                 💤ITJoker<br>永久链接:
-                                    <a href="https://blog.itjoker.cn/post/859FVOsEl/" title="关于&#34;菠菜&#34;站，BBin视讯的连接方式分析...">
-                                        https://blog.itjoker.cn/post/859FVOsEl/
+                                    <a href="https://blog.itjoker.cn/post/7kGrr_X9l/" title="关于如何抢到半佛仙人的支付宝红包方法？✔">
+                                        https://blog.itjoker.cn/post/7kGrr_X9l/
                                     </a><br> 协议: MIT License
                             </div>
                         </div>
@@ -359,17 +462,10 @@
                 </style>
                 <div class="lite-item nearby-article">
                     
-                        <div class="nearby-article-left" style="padding: 10px;">
-                            <a class="prev" rel="prev" href="https://blog.itjoker.cn/post/7NmHOKo_h/">
-                                <i class="fa fa-chevron-left"></i>
-                                用Python写一个百度POST实时推送工具
-                            </a>
-                        </div>
-                        
                             
                                 <div class="nearby-article-right" style="padding: 10px;">
-                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/a-uhd40dh/">
-                                        关于网上的“人肉”里面的技巧，简单解释（以下纯属个人理解）<i class="fa fa-chevron-right"></i>
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/Us-Uufy2z/">
+                                        关于学校水卡的破解教程<i class="fa fa-chevron-right"></i>
                                     </a>
                                 </div>
                                 
@@ -378,9 +474,17 @@
                 <span style="margin-right:15px">
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
-                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/859FVOsEl/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/859FVOsEl/&sharesource=qzone&title=关于&#34;菠菜&#34;站，BBin视讯的连接方式分析...&pics=https://blog.itjoker.cn/images/avatar.png?v=1593103376422&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/859FVOsEl/&sharesource=weibo&title=关于&#34;菠菜&#34;站，BBin视讯的连接方式分析... + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1593103376422"><i class="fa fa-weibo "></i></a>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/7kGrr_X9l/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/7kGrr_X9l/&sharesource=qzone&title=关于如何抢到半佛仙人的支付宝红包方法？✔&pics=https://blog.itjoker.cn/images/avatar.png?v=1593103376422&summary=&lt;h1 id=&#34;0x01-前言&#34;&gt;0x01 前言&lt;/h1&gt;
+&lt;p&gt;每次打开b站发现半佛老师发的神秘代码都早已被抢完，于是气不过，看了一下半佛老师以往发的动态，寻求规律。emmmm，我看用脚本去获取神秘代码应该可行。&lt;br&gt;
+&lt;img src=&#34;https://blog.itjoker.cn/post-images/1593101781573.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+因此接着看下面具体分析。&lt;/p&gt;
+"><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/7kGrr_X9l/&sharesource=weibo&title=关于如何抢到半佛仙人的支付宝红包方法？✔ + " - " + &lt;h1 id=&#34;0x01-前言&#34;&gt;0x01 前言&lt;/h1&gt;
+&lt;p&gt;每次打开b站发现半佛老师发的神秘代码都早已被抢完，于是气不过，看了一下半佛老师以往发的动态，寻求规律。emmmm，我看用脚本去获取神秘代码应该可行。&lt;br&gt;
+&lt;img src=&#34;https://blog.itjoker.cn/post-images/1593101781573.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+因此接着看下面具体分析。&lt;/p&gt;
+&pic="https://blog.itjoker.cn/images/avatar.png?v=1593103376422"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             
