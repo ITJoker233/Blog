@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.itjoker.cn</id>
     <title>💤ITJoker</title>
-    <updated>2020-06-17T05:45:59.824Z</updated>
+    <updated>2020-06-25T12:01:22.308Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.itjoker.cn"/>
     <link rel="self" href="https://blog.itjoker.cn/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://blog.itjoker.cn/images/avatar.png</logo>
     <icon>https://blog.itjoker.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, 💤ITJoker</rights>
+    <entry>
+        <title type="html"><![CDATA[关于学校水卡的破解教程]]></title>
+        <id>https://blog.itjoker.cn/post/Us-Uufy2z/</id>
+        <link href="https://blog.itjoker.cn/post/Us-Uufy2z/">
+        </link>
+        <updated>2020-06-23T14:08:11.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于获取某省专插本录取人数的代码]]></title>
         <id>https://blog.itjoker.cn/post/S73VZTpZ6/</id>
@@ -91,23 +98,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="今天看了叶问4感觉还不错-更新了下chic和card">今天看了叶问4，感觉还不错。更新了下Chic和Card....</h3>
 <h3 id="顺便研究了下dns放大攻击虽然感觉懂了但又觉得是不是理解错了-xd">顺便研究了下dns放大攻击....虽然感觉懂了...但又觉得是不是理解错了 XD</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020.02.28 [日记第一篇？]]]></title>
-        <id>https://blog.itjoker.cn/post/VhQK5Ujks/</id>
-        <link href="https://blog.itjoker.cn/post/VhQK5Ujks/">
-        </link>
-        <updated>2020-02-28T13:44:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>今天又是没有学习数学英语的一天，立个Flag。明天肯定学(ง •_•)ง！<br>
-还有要学学白嫖i春秋的企安殿一个月的课程，当然是crj0b的倾情赞助（雾：白嫖要大声，hhhh）<br>
-主要是太迷茫了 - -||| ，维护一些不知道是啥玩意儿的东西。今天测试了下之前Lite项目中的Chatserver，貌似有编码的bug。但懒的修了。23333<br>
-崩崩很好玩，太肝了，体力400多。玩不动啊！！！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>今天又是没有学习数学英语的一天，立个Flag。明天肯定学(ง •_•)ง！<br>
-还有要学学白嫖i春秋的企安殿一个月的课程，当然是crj0b的倾情赞助（雾：白嫖要大声，hhhh）<br>
-主要是太迷茫了 - -||| ，维护一些不知道是啥玩意儿的东西。今天测试了下之前Lite项目中的Chatserver，貌似有编码的bug。但懒的修了。23333<br>
-崩崩很好玩，太肝了，体力400多。玩不动啊！！！</p>
 ]]></content>
     </entry>
 </feed>

@@ -277,184 +277,312 @@
 </header>
         <div id="main">
             <div id="main-part">
-                <ul class="posts-list">
-                    <li class="lite-item">
-                        <article class="post post-type">
-                            <div class="post-main post-type-main">
-                                <div class="post-content">
-                                    <div class="post-content-real">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                关于学校水卡的破解教程
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            
-                                                <h3>
-                                                    2020
-                                                </h3>
+                                    </span>
+                                                <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/Us-Uufy2z/" class="leancloud_visitors" data-flag-title="关于学校水卡的破解教程">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
                                                 
-                                                    
+                                                        </span>&nbsp;•&nbsp;
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/S73VZTpZ6/">
-                                                                关于获取某省专插本录取人数的代码
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-28 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+                                                        <span class="post-readtime">阅读时间:
+                                            <a href="#">4.5分</a></span>
+                                                        <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1593086471853" srcset="https://blog.itjoker.cn/images/avatar.png?v=1593086471853" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-06-23</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p>#0x01 关于思路<br>
+代码是用C#写的，核心思路是末尾两端的数据是存储水卡的数据<br>
+首4位是存储水卡数据，倒数四位是校验码计算后的结果 偏移量82.然后首位4位中12和34位置的数据位置互换。<br>
+#0x02 结语<br>
+喜欢一句话：技术不分对错.人性才分善恶.<br>
+这个仅供学习测试，勿用于实际。否则后果自负！！<br>
+#0x03 核心代码</p>
+<pre><code class="language-C#">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/j1YZQDjvM/">
-                                                                关于美团面试题的智力题
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-18 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+namespace WaterCard
+{
+    /// &lt;summary&gt;
+    /// MainWindow.xaml 的交互逻辑
+    /// &lt;/summary&gt;
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/w2wHYH_2x/">
-                                                                利用GitHub Action Bing每日一图
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-13 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+        }
+        int MaxMoney = 1000000;//100000为1k
+        int MinMoney = 100;//必须以100为倍数
+        /// &lt;summary&gt;
+        /// 字符串转16进制
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;num&quot;&gt;字符串&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        private string IntToHex(int num)
+        {
+            string result = num.ToString(&quot;X&quot;); //转16进制
+            return result;
+        }
+        /// &lt;summary&gt;
+        /// 16进制转10进制
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;num&quot;&gt;16进制&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        private int HexToInt(string num)
+        {
+            int result = 0;
+            result = int.Parse(num, System.Globalization.NumberStyles.AllowHexSpecifier);//16转10
+            return result;
+        }
+        /// &lt;summary&gt;
+        /// 从右开始读取除F以外的字符
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;num&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        private string RightReadString(string num)
+        {
+            string result=&quot;&quot;,tmp=&quot;&quot;;
+            for (int i = num.Length - 1; i &gt;= 0; i--)
+            {
+                if(num.Substring(i, 1)!=&quot;F&quot;)
+                tmp += num.Substring(i, 1);
+            }
+            for (int i = tmp.Length - 1; i &gt;= 0; i--)
+            {
+                if (tmp.Substring(i, 1) != &quot;F&quot;)
+                    result += tmp.Substring(i, 1);
+            }
+            return result;
+        }
+        private void txtMoney_KeyDown(object sender, KeyEventArgs e)
+        {
+            bool shiftKey = (Keyboard.Modifiers &amp; ModifierKeys.Shift) != 0;//判断shifu键是否按下
+            if (shiftKey == true)                  //当按下shift
+            {
+                e.Handled = true;//不可输入
+            }
+            else                           //未按shift
+            {
+                if (!((e.Key &gt;= Key.D0 &amp;&amp; e.Key &lt;= Key.D9) || (e.Key &gt;= Key.NumPad0 &amp;&amp; e.Key &lt;= Key.NumPad9) || e.Key == Key.Delete || e.Key == Key.Back || e.Key == Key.Tab || e.Key == Key.Enter || e.Key==Key.Decimal))
+                {
+                    e.Handled = true;//不可输入
+                }
+                else if(e.Key == Key.Enter )
+                {
+                    string Money = txtMoney.Text.ToString().Trim().Replace(&quot;.&quot;, &quot;&quot;);
+                    if (int.Parse(Money) &gt; MaxMoney)//大于
+                    {
+                        txtMoney.Text = (MinMoney / 100).ToString() + &quot;.00&quot;;
+                        Money = MinMoney.ToString();
+                        Money = txtMoney.Text.ToString().Trim().Replace(&quot;.&quot;, &quot;&quot;);
+                    }
+                    string Money_body_Value = &quot;110B1709320808&quot;;//总共32个字符  这个最长14位
+                    string Money_head_Value = &quot;&quot;;//最长12位
+                    string Money_bottom_Value = &quot;&quot;;//最长6位
+                    string Money_Value = &quot;&quot;;
+                    if (Money != &quot;&quot;)
+                    {
+                        string Money16_Sub1 = &quot;&quot;;
+                        string Money16_Sub2 = &quot;&quot;;
+                        string Zero = &quot;0&quot;;
+                        
+                        int Money10 = int.Parse(Money);
+                        
+                        string Money16 = IntToHex(Money10);
+                        
+                        int Money16_Len = Money16.Length.GetHashCode();
+                        
+                        int Money_bottom_Value_SloveData = 0;
+                        //
+                        if (Money16_Len%2==0)
+                        {
+                            for (int i = 0; i &lt; Money16_Len - 2; i += 2)
+                            {
+                                Money16_Sub2 = Money16.Substring(i, 2) + Money16_Sub2;
+                                Money_bottom_Value_SloveData = Money_bottom_Value_SloveData + HexToInt(Money16.Substring(i, 2));
+                            }
+                            
+                            Money16_Sub1 = Money16.Substring(Money16_Len-2, 2);
+                            
+                            Money_bottom_Value_SloveData = Money_bottom_Value_SloveData + HexToInt(Money16_Sub1);
+                            
+                        }
+                        else
+                        {
+                            Money16 = &quot;0&quot;+Money16;
+                            
+                            Money16_Len = Money16.Length.GetHashCode();
+                            
+                            for (int i = 0; i &lt;Money16_Len-2; i +=2)
+                            {
+                                Money16_Sub2 =  Money16.Substring(i, 2)+ Money16_Sub2;
+                                Money_bottom_Value_SloveData = Money_bottom_Value_SloveData + HexToInt(Money16.Substring(i, 2));
+                            }
+                            
+                            Money16_Sub1 = Money16.Substring(Money16_Len-2, 2);
+                            
+                            Money_bottom_Value_SloveData = Money_bottom_Value_SloveData + HexToInt(Money16_Sub1);
+                        }
+                        Money_bottom_Value_SloveData -= 130;//校验码计算
+                        
+                        string Money_bottom_Value_SloveData_Int16 = IntToHex(Money_bottom_Value_SloveData);//校验码计算 130是10进制 82 16进制
+                        
+                        Money_bottom_Value = RightReadString(Money_bottom_Value_SloveData_Int16);
+                        
+                        Money_head_Value = Money16_Sub1 + Money16_Sub2;
+                        
+                        int Money_bottom_Value_Len = Money_bottom_Value.Length.GetHashCode();
+                        
+                        int Money_head_Value_Len = Money_head_Value.Length.GetHashCode();
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/FjQt8WN2i/">
-                                                                浙江线上大学给自己用的的刷课脚本~不知道有没有用？
-                                                            </a>
-                                                            <span class="archive-item-date">2020-02-21 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+                        
+                        if (Money_bottom_Value_Len&lt;6)
+                        {
+                            for(int i=0;i&lt;6- Money_bottom_Value_Len;i++)
+                            {
+                                Money_bottom_Value = Zero + Money_bottom_Value;
+                            }
+                        }
+                        
+                        if (Money_head_Value_Len&lt;12)
+                        {
+                            for (int i = 0; i &lt; 12 - Money_head_Value_Len; i++)
+                            {
+                                Money_head_Value +=Zero;
+                            }
+                        }
+                        
+                        Money_Value = Money_head_Value + Money_body_Value + Money_bottom_Value;
+                        
+                        txtMoney_Value.Text = Money_Value;
+              
+                    }
+                }
+            }
+        }
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/alBgdRq8q/">
-                                                                常用的代码片段（不定期更新~备不时之需~）
-                                                            </a>
-                                                            <span class="archive-item-date">2020-02-19 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+        private void form1_Loaded(object sender, RoutedEventArgs e)
+        {
+            textBlock_info.Text += &quot;最大上限值为：&quot;+(MaxMoney/100.0).ToString()+&quot;元&quot;+&quot;超过这个值的大小则生成的为&quot;+ (MinMoney / 100.0).ToString() + &quot;元的值&quot;;
+        }
+    }
+}
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/zXB6J1yv_/">
-                                                                2020Bilibili拜年祭，火锅宴加菜小脚本~
-                                                            </a>
-                                                            <span class="archive-item-date">2020-01-18 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                                
-                                                <h3>
-                                                    2019
-                                                </h3>
-                                                
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
+</code></pre>
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/7NmHOKo_h/">
-                                                                用Python写一个百度POST实时推送工具
-                                                            </a>
-                                                            <span class="archive-item-date">2019-12-31 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/YqHc8Ce_N/">
-                                                                关于调用openpyxl内存泄漏
-                                                            </a>
-                                                            <span class="archive-item-date">2019-09-14 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/uOKNMcsF_/">
-                                                                记一次某学校的教务系统一个验证码的漏洞（辽宁的）
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-25 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/rVpAR2dmO/">
-                                                                记一次因学校公寓断网而去想绕过认证来达到上网，却发现一个很有意思的低级漏洞~
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-15 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/wxMvtfkfT/">
-                                                                闲着无聊 ~写了一个如何在控制台输出类似 P**** hub 的 Logo~2333
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-03 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/L5LAVbpAU/">
-                                                                一个简单的CC攻击器 仅供学习测试！（python 网上魔改版）
-                                                            </a>
-                                                            <span class="archive-item-date">2019-03-18 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                                
-                                    </div>
-                                    <div class="pagination-container">
-                                        
-                                                                
-                                                                        
-                                                                                
-                                    </div>
                                 </div>
                             </div>
-                            <div class="post-footer">
+                            
+                                <div class="reward ">
+                                    <div class="reward-button ">&yen;
+                                        <span class="reward-code "> 
+                                            <span class="alipay-code "> <img class="alipay-img " alt = "support " src="http://cdn.uzz5.com/Chic/alipay.jpg"><b>Alipay</b>                                                            </span>
+                                        <span class="wechat-code "> <img alt ="support " class="wechat-img " src="http://cdn.uzz5.com/Chic/wechat.jpg"><b>Wechat</b> </span> </span>
+                                    </div>
+                                </div>
                                 
-                                        
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                💤ITJoker<br>永久链接:
+                                    <a href="https://blog.itjoker.cn/post/Us-Uufy2z/" title="关于学校水卡的破解教程">
+                                        https://blog.itjoker.cn/post/Us-Uufy2z/
+                                    </a><br> 协议: MIT License
                             </div>
-                        </article>
-                    </li>
-                </ul>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/S73VZTpZ6/">
+                                        关于获取某省专插本录取人数的代码<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/Us-Uufy2z/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/Us-Uufy2z/&sharesource=qzone&title=关于学校水卡的破解教程&pics=https://blog.itjoker.cn/images/avatar.png?v=1593086471853&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/Us-Uufy2z/&sharesource=weibo&title=关于学校水卡的破解教程 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1593086471853"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '2BD3CK3UpkycXgMMH7xb5ew5-gzGzoHsz',
+        appKey: 'IJJfqOGxuf3SIH0iyVKROUgY',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
             </div>
             <div id="sidebar">
     <ul>
@@ -795,6 +923,7 @@ is about to happen</a></span></p>
     </ul>
 </div>
         </div>
+
 </body>
 <footer id="foot">
     <a id="back-to-top" href="#"><i class="Card Card-top"></i></a>
@@ -860,5 +989,18 @@ App.recallMemory();
         );
     </script>
 </footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
 
 </html>
