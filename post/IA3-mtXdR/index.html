@@ -277,100 +277,172 @@
 </header>
         <div id="main">
             <div id="main-part">
-                <ul class="posts-list">
-                    <li class="lite-item">
-                        <article class="post post-type">
-                            <div class="post-main post-type-main">
-                                <div class="post-content">
-                                    <div class="post-content-real">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                关于某加速器的破解方法
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            
-                                                <h3>
-                                                    2020
-                                                </h3>
+                                    </span>
+                                                <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/IA3-mtXdR/" class="leancloud_visitors" data-flag-title="关于某加速器的破解方法">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
                                                 
-                                                    
+                                                        </span>&nbsp;•&nbsp;
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/S73VZTpZ6/">
-                                                                关于获取某省专插本录取人数的代码
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-28 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                                
-                                                <h3>
-                                                    2019
-                                                </h3>
-                                                
-                                                    
-                                                            
-                                                    
+                                                        <span class="post-readtime">阅读时间:
+                                            <a href="#">2.0分</a></span>
+                                                        <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1593691444407" srcset="https://blog.itjoker.cn/images/avatar.png?v=1593691444407" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-07-02</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h1 id="0x01">0x01</h1>
+<p>首先，莫名其妙的原因导致自己的机场全挂了。因此在短期内急需一个梯子，给我日常上Github，后来根据某粉红色app的推荐🐶，但是每次只有30分钟的使用时间，所以很是麻烦。<br>
+所以我使用apktools这个工具去逆向获取代码，分析他限时的代码。</p>
+<h1 id="0x02">0x02</h1>
+<p>起初，我关键词搜索相关的money,httpUtil,post,get等。都找不到分析的入口。一度怀疑它是不是加了壳，而且按照一般情况下的安卓app开发，都会有MainActivity这个。但是我找了半天都没有，一直在androidx下去找，后面别人跟我说试试搜索支付界面的一些关键词。果不其然，搜索支付成功，就找到了相关逻辑。后续，分析代码过程中，通过JByte这个工具，改字节码。改了半天都没用，索性直接抓包分析。</p>
+<h1 id="0x03">0x03</h1>
+<p>最后代码如下:</p>
+<pre><code class="language-python">#              des模式  填充方式  ECB加密方式
+from pyDes import des, PAD_PKCS5, ECB
+import base64
+import requests
+import json
+import random
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/859FVOsEl/">
-                                                                关于&#34;菠菜&#34;站，BBin视讯的连接方式分析...
-                                                            </a>
-                                                            <span class="archive-item-date">2019-12-31 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+#need: pyDes
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/a-uhd40dh/">
-                                                                关于网上的“人肉”里面的技巧，简单解释（以下纯属个人理解）
-                                                            </a>
-                                                            <span class="archive-item-date">2019-11-09 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+dictKey = '0123456789abcdefghijklmnopqrstuvwxyz'
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/uOKNMcsF_/">
-                                                                记一次某学校的教务系统一个验证码的漏洞（辽宁的）
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-25 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+def getRandomIMEI():
+    return ''.join(random.sample(list(dictKey),16))
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/rVpAR2dmO/">
-                                                                记一次因学校公寓断网而去想绕过认证来达到上网，却发现一个很有意思的低级漏洞~
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-15 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                                
-                                    </div>
-                                    <div class="pagination-container">
-                                        
-                                                                
-                                                                        
-                                                                                
-                                    </div>
+def getLink():
+    v='0.9'
+    imei = 'di:{}'.format(getRandomIMEI())
+    id_ = 6 #小于6的是vip节点
+    user = random.randint(2800000,2899999)
+    cid = random.randint(0,9) #节点
+    url = 'http://示例IP:示例端口/api/user/getserver'
+    headers = {}
+    postdata = {}
+    KEY1= '密钥1'
+    KEY2 = '密钥2'
+    postdata['v'] = v
+    postdata['imei'] = imei
+    postdata['id'] = id_
+    postdata['user'] = id_
+    postdata['cid'] = cid
+    headers['User-Agent'] = 'okhttp/4.2.2'
+    headers['Content-Type'] = 'application/x-www-form-urlencoded'
+    response = requests.post(url,data=postdata,headers=headers).text
+    raw_data = base64.b64decode(response)
+    des_obj = des(KEY1, ECB, KEY1, padmode=PAD_PKCS5)
+    data = json.loads(des_obj.decrypt(raw_data).decode())
+    print('ret:{0}\nlocation:{1}\nping:{2}'.format(data['ret'],data['location'],data['ping']))
+    link = base64.b64decode(data['link'])
+    des_link = des(KEY2, ECB, KEY2, padmode=PAD_PKCS5)
+    print('Link:{}'.format(des_link.decrypt(link).decode()))
+
+if __name__ == &quot;__main__&quot;:
+    getLink()
+    while True:
+        pass
+</code></pre>
+
                                 </div>
                             </div>
-                            <div class="post-footer">
+                            
+                                <div class="reward ">
+                                    <div class="reward-button ">&yen;
+                                        <span class="reward-code "> 
+                                            <span class="alipay-code "> <img class="alipay-img " alt = "support " src="http://cdn.uzz5.com/Chic/alipay.jpg"><b>Alipay</b>                                                            </span>
+                                        <span class="wechat-code "> <img alt ="support " class="wechat-img " src="http://cdn.uzz5.com/Chic/wechat.jpg"><b>Wechat</b> </span> </span>
+                                    </div>
+                                </div>
                                 
-                                        
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                💤ITJoker<br>永久链接:
+                                    <a href="https://blog.itjoker.cn/post/IA3-mtXdR/" title="关于某加速器的破解方法">
+                                        https://blog.itjoker.cn/post/IA3-mtXdR/
+                                    </a><br> 协议: MIT License
                             </div>
-                        </article>
-                    </li>
-                </ul>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/7kGrr_X9l/">
+                                        关于如何抢到半佛仙人的支付宝红包方法？✔<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/IA3-mtXdR/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/IA3-mtXdR/&sharesource=qzone&title=关于某加速器的破解方法&pics=https://blog.itjoker.cn/images/avatar.png?v=1593691444407&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/IA3-mtXdR/&sharesource=weibo&title=关于某加速器的破解方法 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1593691444407"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '2BD3CK3UpkycXgMMH7xb5ew5-gzGzoHsz',
+        appKey: 'IJJfqOGxuf3SIH0iyVKROUgY',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
             </div>
             <div id="sidebar">
     <ul>
@@ -705,6 +777,7 @@ is about to happen</a></span></p>
     </ul>
 </div>
         </div>
+
 </body>
 <footer id="foot">
     <a id="back-to-top" href="#"><i class="Card Card-top"></i></a>
@@ -770,5 +843,18 @@ App.recallMemory();
         );
     </script>
 </footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
 
 </html>
