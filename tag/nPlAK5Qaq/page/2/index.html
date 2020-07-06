@@ -20,6 +20,9 @@
 <meta name="author" content="💤ITJoker">
 <meta name="description" content="Be brave no matter what your life is like to you.">
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1594040129861">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/css/Card/prism.min.css" />
@@ -27,7 +30,7 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.28/CDN/js/Card/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.30/CDN/js/Card/script.min.js"></script>
 <!--<script async src="https://blog.itjoker.cn/media/js/script.min.js"></script>-->
 <!--<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />-->
 <link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
@@ -100,22 +103,28 @@
                             opacity: 1;
                         }
                         
-                        #span_btn:hover {
+                        .lite-item {
+                            background-color: #fff;
+                        }
+                        
+                        #spnBtn:hover {
                             transition: all .3s ease;
                             color: #fff;
                             background: #0092ee;
                             /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
                         }
                         
-                        #span_btn {
+                        #spnBtn {
+                            background-color: #fcfcfc;
                             font-size: 14px;
+                            transition: all .3s ease;
                         }
                         
                         .link_a:hover {
                             margin-top: 10px;
                             margin-bottom: 10px;
                             color: #fff;
-                            border-left: 8px solid #0092eeee;
+                            border-left: 8px solid #1976d2;
                             padding: 5px;
                             transition: all .3s ease;
                         }
@@ -195,13 +204,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1587889668003" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1594040129861" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1587889668003" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1594040129861" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -283,26 +292,6 @@
                                                     
 
                                                         <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/rVpAR2dmO/">
-                                                                记一次因学校公寓断网而去想绕过认证来达到上网，却发现一个很有意思的低级漏洞~
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-15 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/wxMvtfkfT/">
-                                                                闲着无聊 ~写了一个如何在控制台输出类似 P**** hub 的 Logo~2333
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-03 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
                                                             <a class="archive-item-link" href="https://blog.itjoker.cn/post/L5LAVbpAU/">
                                                                 一个简单的CC攻击器 仅供学习测试！（python 网上魔改版）
                                                             </a>
@@ -337,7 +326,7 @@
         
             <li class="lite-item">
                 <header class="lite-item-header">
-                    <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
                 </header>
                 <div class="textwidget">
                     <p>
@@ -349,7 +338,7 @@
                 <!--
                 <li class="lite-item">
                     <header class="lite-item-header">
-                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
                     </header>
                     <div class="textwidget">
                         
@@ -361,7 +350,7 @@
                 </li>-->
                 <li class="lite-item">
                     <header class="lite-item-header">
-                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
                     </header>
                     <div class="textwidget">
                         <div id='tags' style="height: auto;width: 360;"></div>
@@ -424,9 +413,9 @@
                                     entries: entries, //数据
                                     width: 300, //宽度
                                     height: 300, //高度
-                                    radius: '5%',
-                                    radiusMin: 75,
-                                    bgDraw: true, //是否显示背景
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
                                     bgColor: '#fff', //背景颜色
                                     opacityOver: 1.00,
                                     opacityOut: 0.05,
@@ -466,13 +455,13 @@
                     
                         <li class="lite-item">
                             <header class="lite-item-header">
-                                <h3 class="sidebar-default-icon lite-item-title">
+                                <h3 class="lite-item-title">
                                     &#x1F3B5;&#x97F3;&#x4E50;
                                 </h3>
                             </header>
                             <div class="textwidget">
                                 <p>
-                                    <div id="player_box"></div>
+                                    <div id="playerbox"></div>
                                 </p>
                             </div>
                         </li>
@@ -482,10 +471,10 @@
                                     var music_array = [];
                                     
                                     music_array.push({
-                                        name: 'M.Graveyard',
-                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/music/you.mp3',
-                                        artist: 'M.Graveyard',
-                                        cover: 'https://p1.music.126.net/v22kNtMro7CvzoiCYJ4zjQ==/3315027558990599.jpg',
+                                        name: 'frost',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.29/CDN/music/frost.mp3',
+                                        artist: 'ITJoker',
+                                        cover: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/pic/old_avatar/avatar.jpg',
                                     });
                                     
                                     music_array.push({
@@ -495,9 +484,23 @@
                                         cover: 'https://p2.music.126.net/Maso95NkjgS0_Jxla7NRGw==/6044015418344178.jpg',
                                     });
                                     
+                                    music_array.push({
+                                        name: 'M.Graveyard',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/music/you.mp3',
+                                        artist: 'M.Graveyard',
+                                        cover: 'https://p1.music.126.net/v22kNtMro7CvzoiCYJ4zjQ==/3315027558990599.jpg',
+                                    });
+                                    
+                                    music_array.push({
+                                        name: '雨き声残響 (カバー)',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.29/CDN/music/雨き声残響 (カバー).mp3',
+                                        artist: 'すぃ',
+                                        cover: 'http://p2.music.126.net/wQ1hODvJ8p8poJEYru-u2w==/109951163597938340.jpg',
+                                    });
+                                    
                                     
                                     const ap = new APlayer({
-                                        container: document.getElementById('player_box'),
+                                        container: document.getElementById('playerbox'),
                                         audio: music_array
                                     });
                                     
@@ -511,7 +514,7 @@
                                     </script>
                                     <li class="lite-item">
                                         <header class="lite-item-header">
-                                            <h3 class="sidebar-default-icon lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
                                         </header>
                                         <div class="textwidget">
                                             <div id="tp-weather-widget"></div>
@@ -523,7 +526,7 @@
                                                 
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
+                                                            <h3 class="lite-item-title">
                                                                 😀此乃付费主题 Card
                                                             </h3>
                                                         </header>
@@ -536,7 +539,7 @@
                                                     
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
+                                                            <h3 class="lite-item-title">
                                                                 😭求职信息
                                                             </h3>
                                                         </header>
@@ -549,13 +552,13 @@
                                                     
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
-                                                                🌐本站的由来<:}})~ 
+                                                            <h3 class="lite-item-title">
+                                                                📢广告招标位
                                                             </h3>
                                                         </header>
                                                         <div class="textwidget">
                                                             <div id="textwidget-box" style="width:100%; height:auto;">
-                                                                <img src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.3/CDN/pic/batman.jpg"></img>
+                                                                如需广告找我，请联系我。
                                                             </div>
                                                         </div>
                                                     </li>
@@ -563,7 +566,7 @@
                                                         
                                                             <li class="lite-item">
                                                                 <header class="lite-item-header">
-                                                                    <h3 class="sidebar-default-icon lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
                                                                 </header>
                                                                 <div class="textwidget">
                                                                     
@@ -629,9 +632,6 @@
                                                                             <p onclick="javascript:top.location='https://lafish.fun'"><span class="link_a"><a href="https://lafish.fun" alt="Lafish的部落格 ">Lafish的部落格 -不误正业！</a></span></p>
 
                                                                             
-                                                                            <p onclick="javascript:top.location='https://kukudexiaoxiaomaya.github.io/'"><span class="link_a"><a href="https://kukudexiaoxiaomaya.github.io/" alt="Moe Pony Blog ">Moe Pony Blog - 热爱生活,今天真好</a></span></p>
-
-                                                                            
                                                                             <p onclick="javascript:top.location='http://blog.diego.plus:5800'"><span class="link_a"><a href="http://blog.diego.plus:5800" alt="Diego’s Blog ">Diego’s Blog -一枚OI蒟蒻的博客</a></span></p>
 
                                                                             
@@ -643,6 +643,9 @@
                                                                             
                                                                             <p onclick="javascript:top.location='https://saky.site/'"><span class="link_a"><a href="https://saky.site/" alt="さくら荘後の花園 ">さくら荘後の花園 -Always believe that something wonderful
 is about to happen</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.lostfawn.cn'"><span class="link_a"><a href="https://www.lostfawn.cn" alt="迷鹿 ">迷鹿 -等待也是约会的一部分嘛</a></span></p>
 
                                                                             
                                                                                 
@@ -659,7 +662,9 @@ is about to happen</a></span></p>
 App.recallMemory();
 </script>
 <!--<img src="https://ipcounter.ihcr.top" alt="标准开头.png" loading="lazy" width="500" height="500 ">-->
-<div style="display:none"><a href="https://nmsl.sbjxw.网址"></a></div>
+<div style="display:none">
+    <a href="https://nmsl.sbjxw.网址"></a>
+</div>
             
                 <div style="width:300px;margin:0 auto; padding:0px 0;">
                     <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31415926535898" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
@@ -693,9 +698,6 @@ App.recallMemory();
                             <a href="https://github.com/" target="_blank">
                                 Github
                             </a>
-    </div>
-    <div id='UpdateTime' style='display:none'>
-        1587889668003
     </div>
     <script>
         var titleTime;
