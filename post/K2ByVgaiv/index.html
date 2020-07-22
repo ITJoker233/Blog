@@ -285,16 +285,20 @@
                                     
                                         <div class="thumbnail-shadow">
                                             <h1 class="post-title">
-                                                关于一些脚本小子无脑怼我的博客的说明
+                                                如何利用ESP32-Cam制作个IP-Camera【microPython】
                                             </h1>
                                             <div class="post-info">
                                                 <span class="post-category"><i class="Card Card-novel"></i>
                                         
+                                            <a href="https://blog.itjoker.cn/tag/nPlAK5Qaq/" rel="category">编程</a>
+                                            
+                                            <a href="https://blog.itjoker.cn/tag/81tJcrhWN/" rel="category">python</a>
+                                            
                                     </span>
                                                 <span class="post-view">
                                                     
                                                         &nbsp;•&nbsp;
-                                                    <span id="/post/cat2/" class="leancloud_visitors" data-flag-title="关于一些脚本小子无脑怼我的博客的说明">
+                                                    <span id="/post/K2ByVgaiv/" class="leancloud_visitors" data-flag-title="如何利用ESP32-Cam制作个IP-Camera【microPython】">
                                                 <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
                                                 <i class="leancloud-visitors-count">0</i>
                                             </span>
@@ -303,34 +307,63 @@
                                                         </span>&nbsp;•&nbsp;
 
                                                         <span class="post-readtime">阅读时间:
-                                            <a href="#">1.2分</a></span>
+                                            <a href="#">1.1分</a></span>
                                                         <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
                                             <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1595428187887" srcset="https://blog.itjoker.cn/images/avatar.png?v=1595428187887" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
-                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2019-12-23</span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-07-22</span>
                                         </div>
                         </header>
                         <div class="post-main post-type-main">
                             <div class="post-content">
                                 <div class="post-content-real">
-                                    <h1 id="首先要说的是在12月份的这个时间段里我的博客早就不在我自己的服务器上部署了~这个是其一">📃首先要说的是，在12月份的这个时间段里，我的博客早就不在我自己的服务器上部署了~这个是其一</h1>
-<h1 id="之前被c发现我这个域名ping失败但是用xxxcodingme的域名是能打开的后面发现原来是你们自个的误以为我还在自己的服务器上部署的然后去cc的-造成博客假死的原因大概是这样的">之前被C，发现我这个域名ping失败，但是用xxx.coding.me的域名是能打开的，后面发现....原来是你们自个的误以为我还在自己的服务器上部署的，然后去CC的。造成博客假死的原因，大概是这样的...</h1>
+                                    <p>代码地址:https://github.com/ITJoker233/Esp32-Cam_IP_Camera</p>
+<h2 id="基于esp32-cam-的-ip-camera">📽 基于Esp32-Cam 的 IP-Camera</h2>
+<p>版本1.0.0</p>
+<h2 id="特性">📍 特性</h2>
 <ol>
-<li>我的域名直接解析xxx.coding.me的IP</li>
-<li>腾讯的防ddos的机制应该是把我这个域名给屏蔽了，或者其他。</li>
+<li>支持多客户端</li>
+<li>支持stream流</li>
+<li>支持snapshot</li>
+<li>支持在线浏览</li>
+<li>支持设置密钥获取</li>
 </ol>
-<h1 id="所以还是老老实实的用cname来解析博客吧~">所以还是老老实实的用CNAME来解析博客吧~</h1>
-<h2 id="font-colorred最后我知道你会通过rss订阅看到的到底是谁颠倒是非或网络暴力心里有点ac数还有就是你目前所做的还有相关的参与人员到时候我会把相关证据提交到网信办的互联网不是法外之地~-如果想要清单的话如下部分font"><font color="red">最后：我知道你会通过rss订阅看到的，到底是谁颠倒是非或网络暴力，心里有点AC数，还有就是，你目前所做的，还有相关的参与人员，到时候我会把相关证据提交到网信办的，互联网不是法外之地~ 如果想要清单的话，如下（部分）：</font></h2>
+<h2 id="未来计划">📜未来计划</h2>
 <ol>
-<li>权同学（Python学的跟屎一样的，笑）</li>
-<li>曹同学</li>
-<li>陈同学</li>
-<li>管同学等...</li>
+<li>增加OTA更新</li>
+<li>more</li>
 </ol>
-<h2 id="总参与人数大概13-15人左右希望好自为之别造谣我~-到时候会把相关证据贴出来">总参与人数大概13-15人左右，希望好自为之，别造谣我~ 到时候会把相关证据贴出来</h2>
-<h3 id="ps这个也是我测试一个工具的测试界面">PS：这个也是我测试一个工具的测试界面🙄</h3>
+<h2 id="用法">📌用法</h2>
+<h3 id="配置环境">配置环境</h3>
+<pre><code>pip3 install esptool
+pip3 install adafruit-ampy
+</code></pre>
+<h3 id="刷入固件">刷入固件</h3>
+<h4 id="假如为com12先擦除esp32-cam">假如为COM12,先擦除ESP32-CAM</h4>
+<pre><code>python3 -m esptool.py --chip esp32 --port COM12  erase_flash
+</code></pre>
+<h4 id="刷入固件-2">刷入固件</h4>
+<p>固件在bin目录下</p>
+<pre><code>cd bin
+python3 -m esptool.py --chip esp32 --port COM12  write_flash -z 0x1000 esp32cam-mirco_python_v1.11-665-gfb0141559-kaki5.bin
+</code></pre>
+<h4 id="配置configjson">配置config.json</h4>
+<p>将里面的wifi_ssid和wifi_password与自己的WiFi名和密码对应<br>
+若有安全需要,则修改apikey就行</p>
+<h3 id="上传文件">上传文件</h3>
+<pre><code>ampy --port COM12 put main.py
+ampy --port COM12 put config.json
+ampy --port COM12 put boot.py
+ampy --port COM12 put uasyncio
+ampy --port COM12 put WIFI
+</code></pre>
+<h3 id="运行">运行</h3>
+<p>上传成功后,按下reset键,已知config.json中的apikey为esp32Camera</br><br>
+在浏览器打开(实时观看):<code>http://esp32-cam的IP/webcam/esp32Camera</code></br><br>
+(获取视频流):<code>http://esp32-cam的IP/stream/esp32Camera</code></br><br>
+(获取照片):<code>http://esp32-cam的IP/snapshot/esp32Camera</code></p>
 
                                 </div>
                             </div>
@@ -348,8 +381,8 @@
                             <div class="post-copyright">
                                 作者:
                                 💤ITJoker<br>永久链接:
-                                    <a href="https://blog.itjoker.cn/post/cat2/" title="关于一些脚本小子无脑怼我的博客的说明">
-                                        https://blog.itjoker.cn/post/cat2/
+                                    <a href="https://blog.itjoker.cn/post/K2ByVgaiv/" title="如何利用ESP32-Cam制作个IP-Camera【microPython】">
+                                        https://blog.itjoker.cn/post/K2ByVgaiv/
                                     </a><br> 协议: MIT License
                             </div>
                         </div>
@@ -373,14 +406,20 @@
                 <div class="lite-item nearby-article">
                     
                             
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/IA3-mtXdR/">
+                                        关于某加速器的破解方法<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
                 </div>
                 <!--Share-->
                 <span style="margin-right:15px">
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
-                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/cat2/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/cat2/&sharesource=qzone&title=关于一些脚本小子无脑怼我的博客的说明&pics=https://blog.itjoker.cn/images/avatar.png?v=1595428187887&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/cat2/&sharesource=weibo&title=关于一些脚本小子无脑怼我的博客的说明 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1595428187887"><i class="fa fa-weibo "></i></a>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/K2ByVgaiv/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/K2ByVgaiv/&sharesource=qzone&title=如何利用ESP32-Cam制作个IP-Camera【microPython】&pics=https://blog.itjoker.cn/images/avatar.png?v=1595428187887&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/K2ByVgaiv/&sharesource=weibo&title=如何利用ESP32-Cam制作个IP-Camera【microPython】 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1595428187887"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             
