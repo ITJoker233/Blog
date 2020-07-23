@@ -22,7 +22,7 @@
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1595428187887">
+<meta name="UpdateTime" content="1595478245662">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/css/Card/prism.min.css" />
@@ -204,13 +204,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1595428187887" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1595478245662" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1595428187887" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1595478245662" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -307,11 +307,11 @@
                                                         </span>&nbsp;•&nbsp;
 
                                                         <span class="post-readtime">阅读时间:
-                                            <a href="#">1.1分</a></span>
+                                            <a href="#">1.7分</a></span>
                                                         <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1595428187887" srcset="https://blog.itjoker.cn/images/avatar.png?v=1595428187887" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1595478245662" srcset="https://blog.itjoker.cn/images/avatar.png?v=1595478245662" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
                                             <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-07-22</span>
                                         </div>
@@ -321,7 +321,11 @@
                                 <div class="post-content-real">
                                     <p>代码地址:https://github.com/ITJoker233/Esp32-Cam_IP_Camera</p>
 <h2 id="基于esp32-cam-的-ip-camera">📽 基于Esp32-Cam 的 IP-Camera</h2>
-<p>版本1.0.0</p>
+<h3 id="当前版本101">当前版本1.0.1</h3>
+<p>main_v1.0.0.py是不支持热更新的</br><br>
+main.py 是最新版本</br><br>
+main_dev.py 是测试版本</br><br>
+支持带摄像头的ESP32,摄像头型号为TY-OV2640-2.0,其他的请自行测试</br></p>
 <h2 id="特性">📍 特性</h2>
 <ol>
 <li>支持多客户端</li>
@@ -329,37 +333,44 @@
 <li>支持snapshot</li>
 <li>支持在线浏览</li>
 <li>支持设置密钥获取</li>
+<li>支持伪OTA更新(目前需要自己搭建热更新服务器,只需把要更新的main.py和config.json放在web目录下,并修改更新Url即可)</li>
 </ol>
 <h2 id="未来计划">📜未来计划</h2>
 <ol>
-<li>增加OTA更新</li>
+<li>对应的移动端</li>
+<li>对应的服务端</li>
+<li>根据时间开启闪光灯</li>
+<li>录制功能</li>
+<li>拍照功能</li>
 <li>more</li>
 </ol>
 <h2 id="用法">📌用法</h2>
-<h3 id="配置环境">配置环境</h3>
+<h3 id="配置环境">🛠配置环境</h3>
 <pre><code>pip3 install esptool
 pip3 install adafruit-ampy
 </code></pre>
-<h3 id="刷入固件">刷入固件</h3>
+<h3 id="擦除esp32-cam">🔨擦除ESP32-CAM</h3>
 <h4 id="假如为com12先擦除esp32-cam">假如为COM12,先擦除ESP32-CAM</h4>
 <pre><code>python3 -m esptool.py --chip esp32 --port COM12  erase_flash
 </code></pre>
-<h4 id="刷入固件-2">刷入固件</h4>
+<h4 id="刷入固件">🔧刷入固件</h4>
 <p>固件在bin目录下</p>
 <pre><code>cd bin
 python3 -m esptool.py --chip esp32 --port COM12  write_flash -z 0x1000 esp32cam-mirco_python_v1.11-665-gfb0141559-kaki5.bin
 </code></pre>
-<h4 id="配置configjson">配置config.json</h4>
+<h4 id="配置configjson">⚙配置config.json</h4>
 <p>将里面的wifi_ssid和wifi_password与自己的WiFi名和密码对应<br>
-若有安全需要,则修改apikey就行</p>
-<h3 id="上传文件">上传文件</h3>
+若有安全需要,则修改apikey就行<br>
+不想热更新的话,则修改updateUrl为空就行</p>
+<h3 id="上传文件">🌍上传文件</h3>
 <pre><code>ampy --port COM12 put main.py
 ampy --port COM12 put config.json
 ampy --port COM12 put boot.py
 ampy --port COM12 put uasyncio
+ampy --port COM12 put urequests.py
 ampy --port COM12 put WIFI
 </code></pre>
-<h3 id="运行">运行</h3>
+<h3 id="运行">🚀运行</h3>
 <p>上传成功后,按下reset键,已知config.json中的apikey为esp32Camera</br><br>
 在浏览器打开(实时观看):<code>http://esp32-cam的IP/webcam/esp32Camera</code></br><br>
 (获取视频流):<code>http://esp32-cam的IP/stream/esp32Camera</code></br><br>
@@ -418,8 +429,8 @@ ampy --port COM12 put WIFI
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
                 <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/K2ByVgaiv/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/K2ByVgaiv/&sharesource=qzone&title=如何利用ESP32-Cam制作个IP-Camera【microPython】&pics=https://blog.itjoker.cn/images/avatar.png?v=1595428187887&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/K2ByVgaiv/&sharesource=weibo&title=如何利用ESP32-Cam制作个IP-Camera【microPython】 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1595428187887"><i class="fa fa-weibo "></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/K2ByVgaiv/&sharesource=qzone&title=如何利用ESP32-Cam制作个IP-Camera【microPython】&pics=https://blog.itjoker.cn/images/avatar.png?v=1595478245662&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/K2ByVgaiv/&sharesource=weibo&title=如何利用ESP32-Cam制作个IP-Camera【microPython】 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1595478245662"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             
