@@ -41,7 +41,7 @@ h4 {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #666;
     cursor: pointer;
 }
 
@@ -476,7 +476,7 @@ textarea {
 .post-type-header .post-type-author a,
 .post-type-header .post-type-title a {
     font-weight: bold;
-    color: #000;
+    color: #666;
 }
 
 .post-type-header .post-type-author .publish-time {
@@ -531,7 +531,7 @@ textarea {
 }
 
 .post-type-header .thumbnail-shadow .post-info span a {
-    color: #fff;
+    color: #fafafa;
 }
 
 .post-type-header .post-relative {
@@ -1304,7 +1304,7 @@ textarea {
 
 .post-preview .post-preview--meta .post-preview--title a {
     text-decoration: none;
-    color: #000;
+    color: #666;
 }
 
 .post-preview .post-preview--meta .post-preview--title a:before {

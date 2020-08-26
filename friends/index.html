@@ -22,24 +22,41 @@
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1598441520698">
+<meta name="UpdateTime" content="1598463636268">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/js/Card/script.min.js"></script>
-<!--<script async src="https://blog.itjoker.cn/media/js/script.min.js"></script>-->
-<!--<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />-->
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://blog.itjoker.cn/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />
 <link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/css/Card/main.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/css/Card/iconfont.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
 <!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/js/love.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
 <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
 
     <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
     
@@ -75,7 +92,7 @@
                         }
                         
                         #foot {
-                            color: #111;
+                            color: #666666;
                         }
                         
                         #menu-item:hover {
@@ -141,6 +158,7 @@
 
 <body>
     <header id="header">
+
     <div id="pc-menu">
         <a id="menu-bar" class="Card Card-menu"></a>
         <a id="menu-title" href="https://blog.itjoker.cn">
@@ -205,14 +223,13 @@
                     
             </ul>
         </nav>
-        <a id="pc-theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
-        <form id="gridea-search-form" class="searchform" data-update="1598441520698" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1598463636268" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1598441520698" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1598463636268" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -275,9 +292,8 @@
                     
             </ul>
         </nav>
-        <a id="mobile-theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
     </div>
-
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
 </header>
         <div id="main">
             <div id="main-part">
@@ -295,7 +311,7 @@
                                     </div>
                                 </div>
                                 <div class="post-relative">
-                                    <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1598441520698" srcset="https://blog.itjoker.cn/images/avatar.png?v=1598441520698" class="avatar avatar-100 photo" width="100" height="100">
+                                    <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1598463636268" srcset="https://blog.itjoker.cn/images/avatar.png?v=1598463636268" class="avatar avatar-100 photo" width="100" height="100">
                                     <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
                                     <span class="post-publish">&nbsp;</span>
                                 </div>
@@ -310,7 +326,7 @@
                                             <ul>
                                                 
                                                     
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://blog.r-ay.cn" title="Ray的博客"><img src="https://blog.r-ay.cn/ENDsoft233.png"
                                                             alt="Ray的博客" class="avatar">
                                                         <div class="link-text"><span
@@ -321,7 +337,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://wrpzkb.cn/" title="wrpzkb"><img src="https://cdn.jsdelivr.net/gh/WRPZKB/ImagePicgo/20191129130834.jpg"
                                                             alt="wrpzkb" class="avatar">
                                                         <div class="link-text"><span
@@ -331,7 +347,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.crj0b.com/" title="Crj0b"><img src="https://www.crj0b.com/img/logo.png"
                                                             alt="Crj0b" class="avatar">
                                                         <div class="link-text"><span
@@ -341,7 +357,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.white-rat.com/" title="白鼠安全团队"><img src="https://www.white-rat.com/favicon.ico"
                                                             alt="白鼠安全团队" class="avatar">
                                                         <div class="link-text"><span
@@ -351,7 +367,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="http://www.xjdesyxx.top" title="青い記憶"><img src="https://xjzsq.gitee.io/blog/xjzsq.png"
                                                             alt="青い記憶" class="avatar">
                                                         <div class="link-text"><span
@@ -361,7 +377,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://hylpq.com" title=" Leo的小站"><img src="https://hylpq.com/favicon.ico"
                                                             alt=" Leo的小站" class="avatar">
                                                         <div class="link-text"><span
@@ -371,7 +387,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://mc-myth.cn/" title="MC MYTH"><img src="https://mc-myth.cn/images/logo.png"
                                                             alt="MC MYTH" class="avatar">
                                                         <div class="link-text"><span
@@ -381,7 +397,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://xueshengjs.com/" title="🐳小咸鱼"><img src="https://xueshengjs.com/images/avatar.png?v=1578900267483"
                                                             alt="🐳小咸鱼" class="avatar">
                                                         <div class="link-text"><span
@@ -391,7 +407,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.panzai.xyz" title="潘甜的小窝"><img src="https://cdn.panzai.xyz/wp-content/uploads/2019/06/1560648957-DA4E99E9-D068-41C7-9716-47A2A0112234.png"
                                                             alt="潘甜的小窝" class="avatar">
                                                         <div class="link-text"><span
@@ -401,7 +417,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://bbs.lynnguo666.site/" title="LynnGuo666的论坛"><img src="https://bbs.lynnguo666.site/assets/avatars/elRrMxbojbfC0yCx.png"
                                                             alt="LynnGuo666的论坛" class="avatar">
                                                         <div class="link-text"><span
@@ -411,7 +427,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://blog.lxns.org/" title="Lxns的博客"><img src="https://blog.lxns.org/avatar/?id=1&amp;size=70"
                                                             alt="Lxns的博客" class="avatar">
                                                         <div class="link-text"><span
@@ -421,7 +437,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://bref.life" title="bref."><img src="https://bref.life/images/avatar.png?v=1581267676852"
                                                             alt="bref." class="avatar">
                                                         <div class="link-text"><span
@@ -431,7 +447,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://xiangyi715.github.io/" title="xiangyi"><img src="https://i.loli.net/2020/02/11/nE7IM1kPTJNuZz9.jpg"
                                                             alt="xiangyi" class="avatar">
                                                         <div class="link-text"><span
@@ -441,7 +457,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://oier.moe/" title="ciwomuli"><img src="https://ciwomuli.github.io/images/avatar.png?v=1580793423458"
                                                             alt="ciwomuli" class="avatar">
                                                         <div class="link-text"><span
@@ -451,7 +467,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.gymxbl.com/" title=" 孤影墨香"><img src="https://www.gymxbl.com/wp-content/themes/Sakura/images/favicon.ico"
                                                             alt=" 孤影墨香" class="avatar">
                                                         <div class="link-text"><span
@@ -461,7 +477,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.stackoverflow.wiki/blog" title="贼拉正经的博客"><img src="https://www.stackoverflow.wiki/blog/images/favicon.png"
                                                             alt="贼拉正经的博客" class="avatar">
                                                         <div class="link-text"><span
@@ -471,7 +487,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://lxxs.xyz" title="lxxs"><img src="https://i.loli.net/2020/03/05/eTWZfIdm2U7lA4x.jpg"
                                                             alt="lxxs" class="avatar">
                                                         <div class="link-text"><span
@@ -481,7 +497,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://tzchz.home.blog/" title="Tzchz&#39;s Blog"><img src="https://tzchzhome.files.wordpress.com/2020/03/cropped-323576.jpg"
                                                             alt="Tzchz&#39;s Blog" class="avatar">
                                                         <div class="link-text"><span
@@ -491,7 +507,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://saowu.github.io/" title="sawou"><img src="https://saowu.github.io/blog/images/avatar.png"
                                                             alt="sawou" class="avatar">
                                                         <div class="link-text"><span
@@ -501,7 +517,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://lafish.fun" title="Lafish的部落格"><img src="https://lafish.fun/images/avatar.png"
                                                             alt="Lafish的部落格" class="avatar">
                                                         <div class="link-text"><span
@@ -511,7 +527,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="http://blog.diego.plus:5800" title="Diego’s Blog"><img src="https://cdn.jsdelivr.net/gh/diego3893/blog-FILE@1.2/typecho/logo_sq.jpg"
                                                             alt="Diego’s Blog" class="avatar">
                                                         <div class="link-text"><span
@@ -521,7 +537,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.parksi.top/" title="Parksi"><img src=" https://www.parksi.xyz/images/avatar.png?v=1587431455459"
                                                             alt="Parksi" class="avatar">
                                                         <div class="link-text"><span
@@ -531,7 +547,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://kzero.vip" title="KZero&#39;s Blog"><img src="https://kzero.vip/images/avatar.gif"
                                                             alt="KZero&#39;s Blog" class="avatar">
                                                         <div class="link-text"><span
@@ -541,7 +557,7 @@
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://saky.site/" title="さくら荘後の花園"><img src="https://cdn.jsdelivr.net/gh/shellblock/cdn@master/img/my%20profile%20photo.jpg"
                                                             alt="さくら荘後の花園" class="avatar">
                                                         <div class="link-text"><span
@@ -552,7 +568,7 @@ is about to happen</p>
                                                     </a>
                                                         </li>
                                                         
-                                                        <li>
+                                                        <li class="friend-card">
                                                             <a class="no-des" href="https://www.lostfawn.cn" title="迷鹿"><img src="https://cdn.jsdelivr.net/gh/jack-bin183/cdn@1.7/img/custom/avatar.png"
                                                             alt="迷鹿" class="avatar">
                                                         <div class="link-text"><span

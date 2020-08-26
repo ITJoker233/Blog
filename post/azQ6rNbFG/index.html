@@ -22,24 +22,41 @@
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1598441520698">
+<meta name="UpdateTime" content="1598463636268">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/js/Card/script.min.js"></script>
-<!--<script async src="https://blog.itjoker.cn/media/js/script.min.js"></script>-->
-<!--<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />-->
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://blog.itjoker.cn/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />
 <link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/css/Card/main.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/css/Card/iconfont.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
 <!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.35/CDN/js/love.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
 <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
 
     <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
     
@@ -75,7 +92,7 @@
                         }
                         
                         #foot {
-                            color: #111;
+                            color: #666666;
                         }
                         
                         #menu-item:hover {
@@ -141,6 +158,7 @@
 
 <body>
     <header id="header">
+
     <div id="pc-menu">
         <a id="menu-bar" class="Card Card-menu"></a>
         <a id="menu-title" href="https://blog.itjoker.cn">
@@ -205,14 +223,13 @@
                     
             </ul>
         </nav>
-        <a id="pc-theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
-        <form id="gridea-search-form" class="searchform" data-update="1598441520698" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1598463636268" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1598441520698" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1598463636268" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -275,9 +292,8 @@
                     
             </ul>
         </nav>
-        <a id="mobile-theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
     </div>
-
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
 </header>
         <div id="main">
             <div id="main-part">
@@ -294,10 +310,10 @@
                                             <div class="post-info">
                                                 <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            <a href="https://blog.itjoker.cn/tag/d4LsXH-In/" rel="category">HTML</a>
-                                            
-                                    </span>
-                                                <span class="post-view">
+                                            <span onclick="javascript:top.location='https://blog.itjoker.cn/tag/d4LsXH-In/'">HTML</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
                                                     
                                                         &nbsp;•&nbsp;
                                                     <span id="/post/azQ6rNbFG/" class="leancloud_visitors" data-flag-title="关于主题Gridea-theme-Chic中Music插件的使用">
@@ -305,15 +321,15 @@
                                                 <i class="leancloud-visitors-count">0</i>
                                             </span>
 
-                                                
-                                                        </span>&nbsp;•&nbsp;
+                                                    
+                                                            </span>&nbsp;•&nbsp;
 
-                                                        <span class="post-readtime">阅读时间:
-                                            <a href="#">0.5分</a></span>
-                                                        <span class="post-edit"></span></div>
+                                                            <span class="post-readtime">阅读时间:
+                                            0.5分</span>
+                                                            <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1598441520698" srcset="https://blog.itjoker.cn/images/avatar.png?v=1598441520698" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1598463636268" srcset="https://blog.itjoker.cn/images/avatar.png?v=1598463636268" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
                                             <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-01-09</span>
                                         </div>
@@ -389,8 +405,8 @@
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
                 <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/azQ6rNbFG/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/azQ6rNbFG/&sharesource=qzone&title=关于主题Gridea-theme-Chic中Music插件的使用&pics=https://blog.itjoker.cn/images/avatar.png?v=1598441520698&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/azQ6rNbFG/&sharesource=weibo&title=关于主题Gridea-theme-Chic中Music插件的使用 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1598441520698"><i class="fa fa-weibo "></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/azQ6rNbFG/&sharesource=qzone&title=关于主题Gridea-theme-Chic中Music插件的使用&pics=https://blog.itjoker.cn/images/avatar.png?v=1598463636268&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/azQ6rNbFG/&sharesource=weibo&title=关于主题Gridea-theme-Chic中Music插件的使用 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1598463636268"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             

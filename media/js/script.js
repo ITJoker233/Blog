@@ -129,18 +129,20 @@ App = {
         })
     },
     changeTheme: function() {
-        window.localStorage.setItem('theme', document.getElementsByTagName('html')[0].classList.contains('theme-dark') ? 'dark' : 'light', );
         var themeIcon = document.getElementById("themeIcon");
-        var currentTheme = window.localStorage.getItem('theme');
+        const currentTheme = window.localStorage.getItem('theme');
         if (currentTheme == 'light') {
             document.getElementsByTagName('html')[0].classList.add('theme-dark');
             themeIcon.classList.remove('Card-moon');
             themeIcon.classList.add('Card-sun');
+            window.localStorage.setItem('theme', 'dark');
         } else {
             document.getElementsByTagName('html')[0].classList.remove('theme-dark');
             themeIcon.classList.remove('Card-sun');
             themeIcon.classList.add('Card-moon');
+            window.localStorage.setItem('theme', 'light');
         }
+        location.reload();
     }
 }
 App.mouseEvent();
