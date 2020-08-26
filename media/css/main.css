@@ -7,6 +7,7 @@
 html,
 body,
 * {
+    cursor: pointer;
     margin: 0;
     padding: 0;
     border: 0;
@@ -70,7 +71,7 @@ input:-webkit-autofill {
 /* 滚动条的滑轨背景颜色 */
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ea9595;
+    background-color: #666666;
 }
 
 
@@ -93,9 +94,9 @@ input:-webkit-autofill {
 button,
 input,
 textarea {
-    /*-webkit-appearance: none;
+    -webkit-appearance: none;
     outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 div,
@@ -146,7 +147,7 @@ textarea {
 
 #header {
     width: 100%;
-    background: #fafafa;
+    background: #f9f9f9;
     position: fixed;
     top: 0;
     left: 0;
@@ -320,7 +321,7 @@ textarea {
     width: 120px;
     border-radius: 3px;
     background-color: #fbf9f9;
-    border: 1px solid #e3e8e8;
+    border: 2px solid #e3e8e8;
     color: #635f5f;
     font-size: 14px;
     padding: 0 10px 0 30px;
@@ -334,7 +335,7 @@ textarea {
     -o-transition-delay: .1s;
 }
 
-#pc-menu .searchform #s:focus {
+#pc-menu .searchform>#s:focus {
     width: 200px;
     border: 2px solid #00BBFF;
 }

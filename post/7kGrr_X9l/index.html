@@ -34,7 +34,7 @@
 <!--<script async src="https://blog.itjoker.cn/media/js/script.min.js"></script>-->
 <!--<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />-->
 <link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/css/Card/main.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.33/CDN/css/Card/main.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/css/Card/iconfont.css" />
 <!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -882,19 +882,18 @@ App.recallMemory();
                         </script>
                         
                             &#x7248;&#x6743;&#x6240;&#x6709; &copy;
-                            <span class="my-face"><script>
-                        var date = new Date();
-                        data2 = new Date(buildTime.replace(/-/g,"/"));
-                        nowYear = date.getFullYear().toString()
-                        buildYear = data2.getFullYear().toString();
-                        if( buildYear == nowYear){
-                            document.write(nowYear);
-                        }
-                        else{
-                            document.write(buildYear+"-" + nowYear);
-                        }
-                    </script>
-                   </span>
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
                             <a href="https://blog.itjoker.cn">
                                 💤ITJoker
                             </a>&nbsp;|&nbsp;Powered by
