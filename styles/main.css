@@ -144,6 +144,9 @@
 .theme-dark .card-bg {
   filter: invert(100) hue-rotate(180deg);
 }
+.theme-dark .catch-me {
+  filter: invert(100) hue-rotate(180deg);
+}
 .theme-dark .aplayer-pic {
   filter: invert(100) hue-rotate(180deg);
 }
