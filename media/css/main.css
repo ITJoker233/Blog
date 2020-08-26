@@ -146,7 +146,7 @@ textarea {
 
 #header {
     width: 100%;
-    background: rgba(255, 255, 255, 1);
+    background: #fafafa;
     position: fixed;
     top: 0;
     left: 0;
@@ -377,7 +377,7 @@ textarea {
     margin-top: 5px;
     -webkit-box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
     box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
-    background: #fff;
+    background: #fafafa;
     border-radius: 2px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -973,10 +973,10 @@ textarea {
 .lite-item .lite-item-header {
     line-height: 38px;
     margin: 0;
-    background: #fcfcfc;
+    background: #efefef;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom: 1px solid #e3e8e8;
+    border-bottom: 1px solid #efefef;
     padding: 0 15px;
 }
 
