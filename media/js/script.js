@@ -16,6 +16,7 @@ function SelectContent(element) {
     selection.removeAllRanges();
     selection.addRange(rangeToSelect);
 }
+
 var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');      
 App = {
     mouseEvent: function() {
@@ -126,6 +127,20 @@ App = {
             hover: "enabled",
             container: "tp-weather-widget"
         })
+    },
+    changeTheme: function() {
+        window.localStorage.setItem('theme', document.getElementsByTagName('html')[0].classList.contains('theme-dark') ? 'dark' : 'light', );
+        var themeIcon = document.getElementById("themeIcon");
+        var currentTheme = window.localStorage.getItem('theme');
+        if (currentTheme == 'light') {
+            document.getElementsByTagName('html')[0].classList.add('theme-dark');
+            themeIcon.classList.remove('Card-moon');
+            themeIcon.classList.add('Card-sun');
+        } else {
+            document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+            themeIcon.classList.remove('Card-sun');
+            themeIcon.classList.add('Card-moon');
+        }
     }
 }
 App.mouseEvent();

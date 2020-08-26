@@ -356,7 +356,6 @@ textarea {
 #foot .theme {
     font-family: "theme" !important;
     font-style: normal;
-    color: #000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1270,7 +1269,7 @@ textarea {
 }
 
 .lite-item .catch-me i:hover {
-    background-color: #0bf;
+    background-color: #6b6b6b;
     color: #fff
 }
 
@@ -1620,12 +1619,12 @@ textarea {
     height: 100%;
 }
 
-#back-to-top-text {
+.back-to-top-text {
     font-size: 10px;
     margin-left: 2px;
 }
 
-#foot #back-to-top {
+#foot .back-to-top {
     display: inline;
     z-index: 999;
     background: #fff;
@@ -1667,7 +1666,7 @@ textarea {
     border-radius: 5px;
 }
 
-#foot #back-to-top .Card-top,
+#foot .back-to-top .Card-top,
 #go-to-comment .Card-comments {
     font-size: 25px;
 }
