@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.itjoker.cn</id>
     <title>💤ITJoker</title>
-    <updated>2020-08-27T04:39:58.182Z</updated>
+    <updated>2020-09-02T06:09:41.301Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.itjoker.cn"/>
     <link rel="self" href="https://blog.itjoker.cn/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://blog.itjoker.cn/images/avatar.png</logo>
     <icon>https://blog.itjoker.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, 💤ITJoker</rights>
+    <entry>
+        <title type="html"><![CDATA[如何给ESP32-CAM编译micropython]]></title>
+        <id>https://blog.itjoker.cn/post/_MdM6OIGt/</id>
+        <link href="https://blog.itjoker.cn/post/_MdM6OIGt/">
+        </link>
+        <updated>2020-09-02T05:39:52.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何利用ESP32-Cam制作个IP-Camera【microPython】]]></title>
         <id>https://blog.itjoker.cn/post/K2ByVgaiv/</id>
@@ -82,18 +89,5 @@
         <link href="https://blog.itjoker.cn/post/F35Qn5hYr/">
         </link>
         <updated>2020-03-11T13:56:58.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[美国数学建模比赛 2020]]></title>
-        <id>https://blog.itjoker.cn/post/D_MFXvGix/</id>
-        <link href="https://blog.itjoker.cn/post/D_MFXvGix/">
-        </link>
-        <updated>2020-03-07T12:06:09.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="题c数据的财富">题C：数据的财富</h2>
-<p>  在其创建的在线市场中，亚马逊为客户提供了对购买进行评分和评价的机会。个人评级-称为“星级”-使购买者可以使用1（低评级，低满意度）到5（高评级，高满意度）的等级来表示他们对产品的满意度。此外，客户可以提交基于文本的消息（称为“评论”），以表达有关该产品的更多意见和信息。其他客户可以根据这些评论提交有帮助或无帮助的等级（称为“帮助等级”），以协助他们自己的产品购买决策。公司使用这些数据来深入了解其参与的市场，参与的时间以及产品设计功能选择的潜在成功。</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="题c数据的财富">题C：数据的财富</h2>
-<p>  在其创建的在线市场中，亚马逊为客户提供了对购买进行评分和评价的机会。个人评级-称为“星级”-使购买者可以使用1（低评级，低满意度）到5（高评级，高满意度）的等级来表示他们对产品的满意度。此外，客户可以提交基于文本的消息（称为“评论”），以表达有关该产品的更多意见和信息。其他客户可以根据这些评论提交有帮助或无帮助的等级（称为“帮助等级”），以协助他们自己的产品购买决策。公司使用这些数据来深入了解其参与的市场，参与的时间以及产品设计功能选择的潜在成功。</p>
-]]></content>
     </entry>
 </feed>

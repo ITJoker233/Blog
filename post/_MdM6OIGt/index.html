@@ -299,200 +299,159 @@
 </header>
         <div id="main">
             <div id="main-part">
-                <ul class="posts-list">
-                    <li class="lite-item">
-                        <article class="post post-type">
-                            <div class="post-main post-type-main">
-                                <div class="post-content">
-                                    <div class="post-content-real">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                如何给ESP32-CAM编译micropython
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            
-                                                <h3>
-                                                    2020
-                                                </h3>
-                                                
+                                                    </span>
+                                                    <span class="post-view">
                                                     
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/_MdM6OIGt/" class="leancloud_visitors" data-flag-title="如何给ESP32-CAM编译micropython">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/K2ByVgaiv/">
-                                                                如何利用ESP32-Cam制作个IP-Camera【microPython】
-                                                            </a>
-                                                            <span class="archive-item-date">2020-07-22 </span>
-                                                        </article>
-                                                        
-                                                            
                                                     
+                                                            </span>&nbsp;•&nbsp;
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/IA3-mtXdR/">
-                                                                关于某加速器的破解方法
-                                                            </a>
-                                                            <span class="archive-item-date">2020-07-02 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
+                                                            <span class="post-readtime">阅读时间:
+                                            1.6分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1599026975666" srcset="https://blog.itjoker.cn/images/avatar.png?v=1599026975666" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-09-02</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p>环境是Ubuntu 18.04 WSL</p>
+<h1 id="0x01-配置必要环境">0x01 配置必要环境</h1>
+<pre><code class="language-bash">sudo apt install gcc make git wget curl flex bison gperf python-serial libncurses5-dev python3-pip python-pip python python3
+</code></pre>
+<h1 id="0x02-下载代码及相关工具">0x02 下载代码及相关工具</h1>
+<pre><code class="language-bash">mkdir micropython
+cd micropython
+git clone --depth=50 --branch=master https://github.com/micropython/micropython.git 
+curl -L https://dl.espressif.com/dl/xtensa-esp32-elf-gcc8_2_0-esp-2019r2-linux-amd64.tar.gz | tar zxf 
+wget https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/esp32-cam.tar.gz
+tar -xzvf esp32-cam.tar.gz
+sudo pip3 install 'pyparsing&lt;2.4' pyserial
+</code></pre>
+<h1 id="0x03-linux-环境变量里添加路径">0x03 linux 环境变量里添加路径</h1>
+<pre><code class="language-bash">export PATH=&quot;~/micropython/xtensa-esp32-elf/bin:~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+export ESPIDF=&quot;~/micropython/esp-idf&quot;
+export MPTD=&quot;~/micropython/esp32-cam&quot;
+</code></pre>
+<h1 id="0x04-编译mpy-cross">0x04 编译mpy-cross</h1>
+<pre><code class="language-bash">cd micropython
+make -C mpy-cross
+</code></pre>
+<h1 id="0x05-esp-idf切换到v40并更新子模块">0x05 esp-idf切换到v4.0,并更新子模块</h1>
+<pre><code class="language-bash">cd ..
+git -C esp-idf checkout $(grep &quot;ESPIDF_SUPHASH_V4 :=&quot; micropython/ports/esp32/Makefile | cut -d &quot; &quot; -f 3)
+git -C esp-idf submodule update --init
+</code></pre>
+<h1 id="0x06-编译esp32-cam">0x06 编译esp32-cam</h1>
+<pre><code class="language-bash">make -C micropyhon/ports/esp32 submodules -j 4
+cp -r micropyhon/ports/esp32 micropyhon/ports/esp32-cam
+cd micropyhon/ports/esp32-cam
+cp $MPTD/Makefile .
+cp $MPTD/modcamera.c .
+cp $MPTD/mpconfigport.h .
+cp $MPTD/boards/manifest.py ./boards/manifest.py
+cp $MPTD/boards/sdkconfig.base ./boards/sdkconfig.base
+make clean
+make V=1 -j 4
+</code></pre>
+<p>如果没有报错应该大功告成了 XD....</p>
 
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/7kGrr_X9l/">
-                                                                关于如何抢到半佛仙人的支付宝红包方法？✔
-                                                            </a>
-                                                            <span class="archive-item-date">2020-06-26 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/S73VZTpZ6/">
-                                                                关于获取某省专插本录取人数的代码
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-28 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/j1YZQDjvM/">
-                                                                关于美团面试题的智力题
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-18 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/w2wHYH_2x/">
-                                                                利用GitHub Action Bing每日一图
-                                                            </a>
-                                                            <span class="archive-item-date">2020-03-13 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/FjQt8WN2i/">
-                                                                浙江线上大学给自己用的的刷课脚本~不知道有没有用？
-                                                            </a>
-                                                            <span class="archive-item-date">2020-02-21 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/alBgdRq8q/">
-                                                                常用的代码片段（不定期更新~备不时之需~）
-                                                            </a>
-                                                            <span class="archive-item-date">2020-02-19 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/zXB6J1yv_/">
-                                                                2020Bilibili拜年祭，火锅宴加菜小脚本~
-                                                            </a>
-                                                            <span class="archive-item-date">2020-01-18 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                                
-                                                <h3>
-                                                    2019
-                                                </h3>
-                                                
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/7NmHOKo_h/">
-                                                                用Python写一个百度POST实时推送工具
-                                                            </a>
-                                                            <span class="archive-item-date">2019-12-31 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/YqHc8Ce_N/">
-                                                                关于调用openpyxl内存泄漏
-                                                            </a>
-                                                            <span class="archive-item-date">2019-09-14 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/uOKNMcsF_/">
-                                                                记一次某学校的教务系统一个验证码的漏洞（辽宁的）
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-25 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                    
-
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/rVpAR2dmO/">
-                                                                记一次因学校公寓断网而去想绕过认证来达到上网，却发现一个很有意思的低级漏洞~
-                                                            </a>
-                                                            <span class="archive-item-date">2019-05-15 </span>
-                                                        </article>
-                                                        
-                                                            
-                                                                
-                                    </div>
-                                    <div class="pagination-container">
-                                        
-                                                                
-                                                                        
-                                                                            <a href="https://blog.itjoker.cn/tag/nPlAK5Qaq/page/2" class="next">Next <i class="icon-arrow-ios-forward-outline"></i></a>
-                                                                            
-                                                                                
-                                    </div>
                                 </div>
                             </div>
-                            <div class="post-footer">
+                            
+                                <div class="reward ">
+                                    <div class="reward-button ">&yen;
+                                        <span class="reward-code "> 
+                                            <span class="alipay-code "> <img class="alipay-img "  alt = "support " src="http://cdn.uzz5.com/Chic/alipay.jpg"><b>Alipay</b>                                                            </span>
+                                        <span class="wechat-code "> <img alt ="support " class="wechat-img " src="http://cdn.uzz5.com/Chic/wechat.jpg"><b>Wechat</b> </span> </span>
+                                    </div>
+                                </div>
                                 
-                                        
-                                            <span class="pagination" onclick="javascript:top.location='https://blog.itjoker.cn/tag/nPlAK5Qaq/page/2'"><a class="next" rel="next" href="https://blog.itjoker.cn/tag/nPlAK5Qaq/page/2" class="next"> <i class="icon-arrow-ios-forward-outline"></i>&#x4E0B;&#x4E00;&#x9875;</a></span>
-                                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                💤ITJoker<br>永久链接:
+                                    <a href="https://blog.itjoker.cn/post/_MdM6OIGt/" title="如何给ESP32-CAM编译micropython">
+                                        https://blog.itjoker.cn/post/_MdM6OIGt/
+                                    </a><br> 协议: MIT License
                             </div>
-                        </article>
-                    </li>
-                </ul>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/K2ByVgaiv/">
+                                        如何利用ESP32-Cam制作个IP-Camera【microPython】<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/_MdM6OIGt/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/_MdM6OIGt/&sharesource=qzone&title=如何给ESP32-CAM编译micropython&pics=https://blog.itjoker.cn/images/avatar.png?v=1599026975666&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/_MdM6OIGt/&sharesource=weibo&title=如何给ESP32-CAM编译micropython + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1599026975666"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '2BD3CK3UpkycXgMMH7xb5ew5-gzGzoHsz',
+        appKey: 'IJJfqOGxuf3SIH0iyVKROUgY',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
             </div>
             <div id="sidebar">
     <ul>
@@ -827,6 +786,7 @@ is about to happen</a></span></p>
     </ul>
 </div>
         </div>
+
 </body>
 <footer id="foot">
     <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
@@ -908,5 +868,18 @@ App.recallMemory();
         $('img').attr('data-fancybox', 'images');
     </script>
 </footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
 
 </html>
