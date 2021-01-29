@@ -21,7 +21,7 @@
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1602161835056">
+<meta name="UpdateTime" content="1611905119948">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -213,12 +213,6 @@
                     </li>
                     
                     <li id="menu-item" class="menu-item">
-                        <a href="http://love.itjoker.cn">
-                            ❤记录
-                        </a>
-                    </li>
-                    
-                    <li id="menu-item" class="menu-item">
                         <a href="/donate.html">
                             💰赞助
                         </a>
@@ -226,13 +220,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1602161835056" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1611905119948" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1602161835056" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1611905119948" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -282,12 +276,6 @@
                     </li>
                     
                     <li class="page_item page-item-2">
-                        <a href="http://love.itjoker.cn">
-                            ❤记录
-                        </a>
-                    </li>
-                    
-                    <li class="page_item page-item-2">
                         <a href="/donate.html">
                             💰赞助
                         </a>
@@ -328,11 +316,11 @@
                                                             </span>&nbsp;•&nbsp;
 
                                                             <span class="post-readtime">阅读时间:
-                                            1.6分</span>
+                                            2.3分</span>
                                                             <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1602161835056" srcset="https://blog.itjoker.cn/images/avatar.png?v=1602161835056" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1611905119948" srcset="https://blog.itjoker.cn/images/avatar.png?v=1611905119948" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
                                             <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-09-02</span>
                                         </div>
@@ -340,46 +328,63 @@
                         <div class="post-main post-type-main">
                             <div class="post-content">
                                 <div class="post-content-real">
-                                    <p>环境是Ubuntu 18.04 WSL</p>
+                                    <h1 id="0x0-编译前须知">0x0 编译前须知</h1>
+<p>环境:Ubuntu 18.04 WSL<br>
+最好有梯子，配合proxychains来编译，或者直接使用vultr的机子来。<br>
+<font color="red">建议不要用root用户</font></p>
 <h1 id="0x01-配置必要环境">0x01 配置必要环境</h1>
 <pre><code class="language-bash">sudo apt install gcc make git wget curl flex bison gperf python-serial libncurses5-dev python3-pip python-pip python python3
 </code></pre>
 <h1 id="0x02-下载代码及相关工具">0x02 下载代码及相关工具</h1>
 <pre><code class="language-bash">mkdir micropython
 cd micropython
+git clone --recursive https://github.com/espressif/esp-idf.git
 git clone --depth=50 --branch=master https://github.com/micropython/micropython.git 
 curl -L https://dl.espressif.com/dl/xtensa-esp32-elf-gcc8_2_0-esp-2019r2-linux-amd64.tar.gz | tar zxf 
-wget https://cdn.jsdelivr.net/gh/ITJoker233/Blog/esp32-cam.tar.gz
-tar -xzvf esp32-cam.tar.gz
+wget https://cdn.jsdelivr.net/gh/ITJoker233/Blog/esp32-cam.tar.xz
+mkdir esp32-cam
+tar -xzvf esp32-cam.tar.gz -C esp32-cam
 sudo pip3 install 'pyparsing&lt;2.4' pyserial
 </code></pre>
 <h1 id="0x03-linux-环境变量里添加路径">0x03 linux 环境变量里添加路径</h1>
-<pre><code class="language-bash">export PATH=&quot;~/micropython/xtensa-esp32-elf/bin:~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
-export ESPIDF=&quot;~/micropython/esp-idf&quot;
-export MPTD=&quot;~/micropython/esp32-cam&quot;
+<pre><code class="language-bash">cd
+export PATH=&quot;$PWD/micropython/xtensa-esp32-elf/bin:~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+export ESPIDF=&quot;$PWD/micropython/esp-idf&quot;
+export MPTD=&quot;$PWD/micropython/esp32-cam&quot;
 </code></pre>
 <h1 id="0x04-编译mpy-cross">0x04 编译mpy-cross</h1>
-<pre><code class="language-bash">cd micropython
+<pre><code class="language-bash">cd micropython/micropython
 make -C mpy-cross
 </code></pre>
 <h1 id="0x05-esp-idf切换到v40并更新子模块">0x05 esp-idf切换到v4.0,并更新子模块</h1>
 <pre><code class="language-bash">cd ..
 git -C esp-idf checkout $(grep &quot;ESPIDF_SUPHASH_V4 :=&quot; micropython/ports/esp32/Makefile | cut -d &quot; &quot; -f 3)
 git -C esp-idf submodule update --init
+git -C micropython submodule update --init
+cd esp-idf/components
+git clone https://github.com/espressif/esp32-camera.git
 </code></pre>
 <h1 id="0x06-编译esp32-cam">0x06 编译esp32-cam</h1>
-<pre><code class="language-bash">make -C micropyhon/ports/esp32 submodules -j 4
-cp -r micropyhon/ports/esp32 micropyhon/ports/esp32-cam
-cd micropyhon/ports/esp32-cam
+<pre><code class="language-bash">cd ../..
+make -C micropython/ports/esp32 submodules -j4
+cp -r micropython/ports/esp32 micropython/ports/esp32-cam
+cd micropython/ports/esp32-cam
 cp $MPTD/Makefile .
 cp $MPTD/modcamera.c .
 cp $MPTD/mpconfigport.h .
 cp $MPTD/boards/manifest.py ./boards/manifest.py
 cp $MPTD/boards/sdkconfig.base ./boards/sdkconfig.base
 make clean
-make V=1 -j 4
+make V=1 -j4
 </code></pre>
-<p>如果没有报错应该大功告成了 XD....</p>
+<h3 id="如果没有报错应该大功告成了-xd">如果没有报错应该大功告成了 XD....</h3>
+<h2 id="如果出现编译错误例如缺少xxxc文件尝试修改编译目录下的makefile具体思路如下">如果出现编译错误，例如缺少xxx.c文件，尝试修改编译目录下的Makefile,具体思路如下:</h2>
+<p>对比Makefile</p>
+<pre><code class="language-bash">$MPTD/Makefile #我的提供的文件
+../esp32/Makefile  #esp32目录下的Makefile
+</code></pre>
+<p>搜索关键词<code>cam</code>,大概会有12处可以匹配到。<br>
+然后把那整行或整段的添加到相应的位置。</p>
 
                                 </div>
                             </div>
@@ -441,8 +446,8 @@ make V=1 -j 4
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
                 <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/MdM6OIGt/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/MdM6OIGt/&sharesource=qzone&title=如何给ESP32-CAM编译micropython&pics=https://blog.itjoker.cn/images/avatar.png?v=1602161835056&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/MdM6OIGt/&sharesource=weibo&title=如何给ESP32-CAM编译micropython + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1602161835056"><i class="fa fa-weibo "></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/MdM6OIGt/&sharesource=qzone&title=如何给ESP32-CAM编译micropython&pics=https://blog.itjoker.cn/images/avatar.png?v=1611905119948&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/MdM6OIGt/&sharesource=weibo&title=如何给ESP32-CAM编译micropython + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1611905119948"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             
@@ -744,9 +749,6 @@ make V=1 -j 4
                                                                             <p onclick="javascript:top.location='https://www.panzai.xyz'"><span class="link_a"><a href="https://www.panzai.xyz" alt="潘甜的小窝 ">潘甜的小窝 -生活·阅历·爱情·成长</a></span></p>
 
                                                                             
-                                                                            <p onclick="javascript:top.location='https://bbs.lynnguo666.site/'"><span class="link_a"><a href="https://bbs.lynnguo666.site/" alt="LynnGuo666的论坛 ">LynnGuo666的论坛 -分享互联网知识，发布游戏实况，个人制作软件</a></span></p>
-
-                                                                            
                                                                             <p onclick="javascript:top.location='https://blog.lxns.org/'"><span class="link_a"><a href="https://blog.lxns.org/" alt="Lxns的博客 ">Lxns的博客 -Lxns-Network</a></span></p>
 
                                                                             
@@ -763,9 +765,6 @@ make V=1 -j 4
 
                                                                             
                                                                             <p onclick="javascript:top.location='https://www.stackoverflow.wiki/blog'"><span class="link_a"><a href="https://www.stackoverflow.wiki/blog" alt="贼拉正经的博客 ">贼拉正经的博客 -分享Java的技术文章</a></span></p>
-
-                                                                            
-                                                                            <p onclick="javascript:top.location='https://lxxs.xyz'"><span class="link_a"><a href="https://lxxs.xyz" alt="lxxs ">lxxs -一个正当年的OIer，充满活力幺。</a></span></p>
 
                                                                             
                                                                             <p onclick="javascript:top.location='https://tzchz.home.blog/'"><span class="link_a"><a href="https://tzchz.home.blog/" alt="Tzchz&#39;s Blog ">Tzchz&#39;s Blog -Enjoy coding life</a></span></p>

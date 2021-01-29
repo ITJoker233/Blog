@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    💤ITJoker
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="💤ITJoker">
+<meta name="description" content="Be brave no matter what your life is like to you.">
+<meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1611905119948">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://blog.itjoker.cn/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://blog.itjoker.cn/media/css/main.min.css" />
+<link rel="stylesheet" href="https://blog.itjoker.cn/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151715111-1"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'UA-151715111-1');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://blog.itjoker.cn">
+            💤ITJoker
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://www.itjoker.cn/">
+                            🎈主页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            📍博客
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📕归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/friends">
+                            👨‍💻友链
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about/">
+                            🙎‍♂️关于
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/donate.html">
+                            💰赞助
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1611905119948" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1611905119948" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="https://www.itjoker.cn/">
+                            🎈主页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            📍博客
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📕归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/friends">
+                            👨‍💻友链
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about/">
+                            🙎‍♂️关于
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/donate.html">
+                            💰赞助
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                如何让小米路由4C刷上Openwrt20【教程】
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/gHU4AfKAY/" class="leancloud_visitors" data-flag-title="如何让小米路由4C刷上Openwrt20【教程】">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            3.1分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1611905119948" srcset="https://blog.itjoker.cn/images/avatar.png?v=1611905119948" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-11-24</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h1 id="0x00">0x00</h1>
+<p>本教程需要wsl环境，需要在wsl中安装、配置好python3环境。以及后续编译固件需要科学上网<br>
+从中科学上网的工具，我使用proxychains，具体配置详情见百度~</p>
+<h1 id="0x01">0x01</h1>
+<p>首先对小米路由原生固件进行破解，通过Github搜索，找到exp脚本。<br>
+目前只支持破解原生固件 <strong>2.28.62</strong> 到 <strong>2.28.132</strong><br>
+于是clone下来。</p>
+<pre><code class="language-bash">proxychains git clone https://github.com/acecilia/OpenWRTInvasion.git
+cd OpenWRTInvasion
+sudo proxychains pip3 install -r requirements.txt
+sudo proxychains python3 remote_command_execution_vulnerability.py
+</code></pre>
+<p>提示输入Router IP address [press enter for using the default 直接回车<br>
+当提示输入stok的时候，你需要登录小米路由后台，在浏览器参数stok中获取值，复制并粘贴<br>
+若中间破解失败，检查下是否已具备科学上网条件。</p>
+<h1 id="0x02">0x02</h1>
+<p>路由破解成功后，我们需要telnet的方式，连接上路由并刷入breed。</p>
+<pre><code class="language-bash">telnet 192.168.31.1
+dd if=/dev/mtd3 of=/tmp/eeprom.bin
+</code></pre>
+<p>用WinSCP的FTP把eeprom.bin备份到本地</p>
+<pre><code class="language-bash">cd /tmp &amp;&amp; wget https://breed.hackpascal.net/breed-mt7688-reset38.bin &amp;&amp; mv breed-mt7688-reset38.bin breed.bin
+mtd write breed.bin Bootloader
+</code></pre>
+<p>按住路由Reset按键3秒通电进入Breed，刷eeprom后双清。</p>
+<h1 id="0x03">0x03</h1>
+<p>在上面我们已经成功的刷入breed了，那么开始编译Openwrt固件，我首先选用的是lede，主要能保证编译成功。由于官方并不支持小米路由4c,通过论坛搜索，找到国外老哥**@MacTavishAO**的仓库:https://github.com/MacTavishAO/openwrt，但是他的dts文件的分区，并不适用于本教程，因此改动成如下</p>
+<pre><code class="language-C">                        partition@0 {
+                                label = &quot;u-boot&quot;;
+                                reg = &lt;0x0 0x30000&gt;;
+                                read-only;
+                        };
+
+                        partition@30000 {
+                                label = &quot;u-boot-env&quot;;
+                                reg = &lt;0x30000 0x10000&gt;;
+                        };
+
+                        factory: partition@40000 {
+                                label = &quot;factory&quot;;
+                                reg = &lt;0x40000 0x10000&gt;;
+                                read-only;
+                        };
+
+                        partition@50000 {
+                                compatible = &quot;denx,uimage&quot;;
+                                label = &quot;firmware&quot;;
+                                reg = &lt;0x50000 0x1000000&gt;;
+                        };
+</code></pre>
+<p>但是具体的改动了哪些文件，详情见链接</p>
+<pre><code class="language-bash">https://github.com/ITJoker233/lede/commit/7c46ed3605def221b749fcf356dba5c865a9c54e
+</code></pre>
+<p>以下是编译过程</p>
+<pre><code class="language-bash">proxychains git clone https://github.com/ITJoker233/lede
+cd lede 
+sudo proxychains apt-get update
+sudo proxychains apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs gcc-multilib g++-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler antlr3 gperf swig
+sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+proxychains ./scripts/feeds update -a
+./scripts/feeds install -a
+cp xiaomi-router-4c.config .config
+</code></pre>
+<p>开始下载dl等配置并编译</p>
+<pre><code class="language-bash">proxychains make download -j8
+make -j1 V=s
+</code></pre>
+<p>具体速度取决于你的电脑配置，大概10-30分钟左右编译完成~<br>
+这有一份已经编译好的固件,均带科学上网插件，推荐无ipv6版本，可以自行下载通过Breed刷入<br>
+<a href="https://cdn.jsdelivr.net/gh/ITJoker233/Blog/lede-xiaomi-router-4C-ssr_plus-chinese-no_ipv6.bin">固件下载（中文）不带ipv6版本</a><br>
+<a href="https://cdn.jsdelivr.net/gh/ITJoker233/Blog/lede-xiaomi-router-4C-ssr_plus-chinese.bin">固件下载（中文）带ipv6版本</a></p>
+
+                                </div>
+                            </div>
+                            
+                                <div class="reward ">
+                                    <div class="reward-button ">&yen;
+                                        <span class="reward-code "> 
+                                            <span class="alipay-code "> <img class="alipay-img "  alt = "support " src="http://cdn.uzz5.com/Chic/alipay.jpg"><b>Alipay</b>                                                            </span>
+                                        <span class="wechat-code "> <img alt ="support " class="wechat-img " src="http://cdn.uzz5.com/Chic/wechat.jpg"><b>Wechat</b> </span> </span>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                💤ITJoker<br>永久链接:
+                                    <a href="https://blog.itjoker.cn/post/gHU4AfKAY/" title="如何让小米路由4C刷上Openwrt20【教程】">
+                                        https://blog.itjoker.cn/post/gHU4AfKAY/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/8qO9KTWx2/">
+                                        关于某恒CTF比赛的web题-眼睛瞪得像铜铃<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/gHU4AfKAY/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/gHU4AfKAY/&sharesource=qzone&title=如何让小米路由4C刷上Openwrt20【教程】&pics=https://blog.itjoker.cn/images/avatar.png?v=1611905119948&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/gHU4AfKAY/&sharesource=weibo&title=如何让小米路由4C刷上Openwrt20【教程】 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1611905119948"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '2BD3CK3UpkycXgMMH7xb5ew5-gzGzoHsz',
+        appKey: 'IJJfqOGxuf3SIH0iyVKROUgY',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://blog.itjoker.cn/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷安全',
+                                        url: 'https://blog.itjoker.cn/tag/VY0G11VFN/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷python',
+                                        url: 'https://blog.itjoker.cn/tag/81tJcrhWN/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编程',
+                                        url: 'https://blog.itjoker.cn/tag/nPlAK5Qaq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷日记',
+                                        url: 'https://blog.itjoker.cn/tag/o9UX_O4nO/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Raspberry',
+                                        url: 'https://blog.itjoker.cn/tag/MT4rO6Mtf/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Me',
+                                        url: 'https://blog.itjoker.cn/tag/ZaMG0PM6s/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷HTML',
+                                        url: 'https://blog.itjoker.cn/tag/d4LsXH-In/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: 'frost',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.29/CDN/music/frost.mp3',
+                                        artist: 'ITJoker',
+                                        cover: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/pic/old_avatar/avatar.jpg',
+                                    });
+                                    
+                                    music_array.push({
+                                        name: 'Pure Sunlight (Original Mix)',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/music/bgm.mp3',
+                                        artist: 'Laura Brehm / Mr FijiWiji / AgNo3',
+                                        cover: 'https://p2.music.126.net/Maso95NkjgS0_Jxla7NRGw==/6044015418344178.jpg',
+                                    });
+                                    
+                                    music_array.push({
+                                        name: 'M.Graveyard',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/music/you.mp3',
+                                        artist: 'M.Graveyard',
+                                        cover: 'https://p1.music.126.net/v22kNtMro7CvzoiCYJ4zjQ==/3315027558990599.jpg',
+                                    });
+                                    
+                                    music_array.push({
+                                        name: '雨き声残響 (カバー)',
+                                        url: 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.29/CDN/music/雨き声残響 (カバー).mp3',
+                                        artist: 'すぃ',
+                                        cover: 'http://p2.music.126.net/wQ1hODvJ8p8poJEYru-u2w==/109951163597938340.jpg',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    <script>
+                                        App.weather();
+                                    </script>
+                                    <li class="lite-item">
+                                        <header class="lite-item-header">
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                        </header>
+                                        <div class="textwidget">
+                                            <div id="tp-weather-widget"></div>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                😀此乃付费主题 Card 
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                QQ群:499093465<br>💰支付12元即可获取主题！在赞助页面支付，支付完成后将订单号,姓名和接收主题的邮箱(注:后续更新都通过该邮箱接收)发送到邮箱给我，24小时内通过邮箱发送给你。若付款，概不退款！请勿二次贩卖，否则后续升级服务将不提供！<br><a target="_blank" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=mfDZ8O3z9vL867f69w" style="text-decoration:none;"><img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                📢广告招标位
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                如需广告找我，请联系我。建议邮箱联系，评论收不到消息....
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                🎖关于外包
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                详情见我Github主页的价格介绍
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                        
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                        
+                                                                            <p onclick="javascript:top.location='https://blog.r-ay.cn'"><span class="link_a"><a href="https://blog.r-ay.cn" alt="Ray的博客 ">Ray的博客 -高一，居住在浙江温州。
+是条有梦想的咸鱼。</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='http://blog.wbucs.com'"><span class="link_a"><a href="http://blog.wbucs.com" alt="WBUCS ">WBUCS -划水的时候在干什么，有没有空，可以来A题吗</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://wrpzkb.cn/'"><span class="link_a"><a href="https://wrpzkb.cn/" alt="wrpzkb ">wrpzkb -目光放远,万事皆悲</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.crj0b.com/'"><span class="link_a"><a href="https://www.crj0b.com/" alt="Crj0b ">Crj0b -Life.In born.Live on.</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.white-rat.com/'"><span class="link_a"><a href="https://www.white-rat.com/" alt="白鼠安全团队 ">白鼠安全团队 -白鼠安全团队</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='http://www.xjdesyxx.top'"><span class="link_a"><a href="http://www.xjdesyxx.top" alt="青い記憶 ">青い記憶 -现役蒟蒻ACMer/珂学家的博客</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://hylpq.com'"><span class="link_a"><a href="https://hylpq.com" alt=" Leo的小站 "> Leo的小站 -レオ のサ イト</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://mc-myth.cn/'"><span class="link_a"><a href="https://mc-myth.cn/" alt="MC MYTH ">MC MYTH -贱贱的主页</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://xueshengjs.com/'"><span class="link_a"><a href="https://xueshengjs.com/" alt="🐳小咸鱼 ">🐳小咸鱼 -分享Js的知识，走上咸鱼的路程。</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.panzai.xyz'"><span class="link_a"><a href="https://www.panzai.xyz" alt="潘甜的小窝 ">潘甜的小窝 -生活·阅历·爱情·成长</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://blog.lxns.org/'"><span class="link_a"><a href="https://blog.lxns.org/" alt="Lxns的博客 ">Lxns的博客 -Lxns-Network</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://bref.life'"><span class="link_a"><a href="https://bref.life" alt="bref. ">bref. -总而言之，生活继续。</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://xiangyi715.github.io/'"><span class="link_a"><a href="https://xiangyi715.github.io/" alt="xiangyi ">xiangyi -We are here to put a dent in the universe. Otherwise why else even be here? </a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://oier.moe/'"><span class="link_a"><a href="https://oier.moe/" alt="ciwomuli ">ciwomuli -退役oier，学习，爱情，OI，魔方</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.gymxbl.com/'"><span class="link_a"><a href="https://www.gymxbl.com/" alt=" 孤影墨香 "> 孤影墨香 -海内存知己，天涯若比邻</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.stackoverflow.wiki/blog'"><span class="link_a"><a href="https://www.stackoverflow.wiki/blog" alt="贼拉正经的博客 ">贼拉正经的博客 -分享Java的技术文章</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://tzchz.home.blog/'"><span class="link_a"><a href="https://tzchz.home.blog/" alt="Tzchz&#39;s Blog ">Tzchz&#39;s Blog -Enjoy coding life</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://saowu.github.io/'"><span class="link_a"><a href="https://saowu.github.io/" alt="sawou ">sawou -A programmer who wants to be happy and muddle along</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://lafish.fun'"><span class="link_a"><a href="https://lafish.fun" alt="Lafish的部落格 ">Lafish的部落格 -不误正业！</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='http://blog.diego.plus:5800'"><span class="link_a"><a href="http://blog.diego.plus:5800" alt="Diego’s Blog ">Diego’s Blog -一枚OI蒟蒻的博客</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.parksi.top/'"><span class="link_a"><a href="https://www.parksi.top/" alt="Parksi ">Parksi -半真半假，半信半疑。</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://kzero.vip'"><span class="link_a"><a href="https://kzero.vip" alt="KZero&#39;s Blog ">KZero&#39;s Blog -技术博客</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://saky.site/'"><span class="link_a"><a href="https://saky.site/" alt="さくら荘後の花園 ">さくら荘後の花園 -Always believe that something wonderful
+is about to happen</a></span></p>
+
+                                                                            
+                                                                            <p onclick="javascript:top.location='https://www.lostfawn.cn'"><span class="link_a"><a href="https://www.lostfawn.cn" alt="迷鹿 ">迷鹿 -等待也是约会的一部分嘛</a></span></p>
+
+                                                                            
+                                                                                
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        <script>
+App.recallMemory();
+</script>
+<!--<img src="https://ipcounter.ihcr.top" alt="标准开头.png" loading="lazy" width="500" height="500 ">-->
+<div style="display:none">
+    <a href="https://nmsl.sbjxw.网址"></a>
+</div>
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31415926535898" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            浙公网安备 没有号
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2018-03-15'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://blog.itjoker.cn">
+                                💤ITJoker
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://coding.net" target="_blank">
+                                Coding
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%c💤ITJoker\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>
