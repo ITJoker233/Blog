@@ -665,7 +665,10 @@ textarea {
     color: #999;
 }
 
-.post-type .post-footer .post-copyright {
+
+/*.post-footer */
+
+.post-type .post-copyright {
     background-color: #fbf9f9;
     padding: 5px;
     font-size: 12px;
@@ -674,8 +677,10 @@ textarea {
     border: 1px solid #e3e8e8;
 }
 
+
+/*.post-type .post-footer a,*/
+
 .post-type .post-content a,
-.post-type .post-footer a,
 #comments .comment-comment p a {
     color: #0be;
 }
@@ -772,6 +777,8 @@ textarea {
     list-style: none;
 }
 
+
+/*
 .post-type .post-footer {
     margin: 0 -15px -15px;
     border-top: 1px solid #e3e8e8;
@@ -809,6 +816,7 @@ textarea {
 .post-type .post-footer>span:last-child {
     border-right: none;
 }
+*/
 
 .lite-item.tags_related #tags_related {
     padding: 10px 15px 0;
