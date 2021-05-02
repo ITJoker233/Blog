@@ -142,7 +142,7 @@ App = {
             themeIcon.classList.add('Card-moon');
             window.localStorage.setItem('theme', 'light');
         }
-        location.reload();
+        //location.reload();
     }
 }
 App.mouseEvent();

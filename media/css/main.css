@@ -336,7 +336,7 @@ textarea {
 }
 
 #pc-menu .searchform>#s:focus {
-    width: 200px;
+    width: 150px;
     border: 2px solid #00BBFF;
 }
 
