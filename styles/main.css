@@ -1,12 +1,12 @@
 @charset "UTF-8";
 * {
-  cursor: url("https://cdn.jsdelivr.net/gh/WRPZKB/ImagePicgo/houxuan.cur"), auto !important;
+  cursor: url("https://fastly.jsdelivr.net/gh/WRPZKB/ImagePicgo/houxuan.cur"), auto !important;
   -webkit-appearance: none;
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 :active {
-  cursor: url("https://cdn.jsdelivr.net/gh/WRPZKB/ImagePicgo/zc.cur"), auto !important;
+  cursor: url("https://fastly.jsdelivr.net/gh/WRPZKB/ImagePicgo/zc.cur"), auto !important;
 }
 @keyframes rotate_z {
   from {
