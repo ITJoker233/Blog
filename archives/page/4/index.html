@@ -21,7 +21,7 @@
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1619948022006">
+<meta name="UpdateTime" content="1653477937058">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -44,15 +44,28 @@
 <script>
     $().ready(
         function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
             var themeIcon = document.getElementById("themeIcon");
             var currentTheme = window.localStorage.getItem('theme');
             if (currentTheme == 'dark') {
-                document.getElementsByTagName('html')[0].classList.add('theme-dark');
-                document.getElementsByTagName('html')[0].removeAttribute('id');
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
                 themeIcon.classList.remove('Card-moon');
                 themeIcon.classList.add('Card-sun');
             } else {
-                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
                 document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
                 themeIcon.classList.remove('Card-sun');
                 themeIcon.classList.add('Card-moon');
@@ -224,13 +237,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1619948022006" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1653477937058" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1619948022006" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1653477937058" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -306,6 +319,14 @@
                                                 
                                                     
                                                         <article class="archive-item">
+                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/D_MFXvGix/">
+                                                                美国数学建模比赛 2020
+                                                            </a>
+                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-03-07</span></article>
+                                                        
+                                                            
+                                                    
+                                                        <article class="archive-item">
                                                             <a class="archive-item-link" href="https://blog.itjoker.cn/post/iCBxLUOlf/">
                                                                 关于nltk的相关配置
                                                             </a>
@@ -328,25 +349,17 @@
                                                             <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-02-21</span></article>
                                                         
                                                             
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://blog.itjoker.cn/post/alBgdRq8q/">
-                                                                常用的代码片段（不定期更新~备不时之需~）
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-02-19</span></article>
-                                                        
-                                                            
                                                                 
                                     </div>
                                 </div>
                             </div>
                             <div class="post-footer">
                                 
-                                    <span id="spnBtn" style="display: inline-block;width: 50%;text-align: center;border-right: 1px solid#e3e8e8;font-size: 14px;float: left;" onclick="javascript:top.location='https://blog.itjoker.cn/archives/page/3/'"><i
+                                    <span id="spnBtn" style="display: inline-block;width: 50%;text-align: center;font-size: 14px;float: left;border-top-left-radius: 5px;" onclick="javascript:top.location='https://blog.itjoker.cn/archives/page/3/'"><i
                                     class="icon-arrow-ios-back-outline"></i> &#x4E0A;&#x4E00;&#x9875;</span>
                                     
                                             
-                                                <span id="spnBtn" style="display: inline-block;width: 50%;text-align: center;border-right: 1px solid#e3e8e8;font-size: 14px;" onclick="javascript:top.location='https://blog.itjoker.cn/archives/page/5/'"><i
+                                                <span id="spnBtn" style="display: inline-block;width: 50%;text-align: center;font-size: 14px;border-top-right-radius: 5px;" onclick="javascript:top.location='https://blog.itjoker.cn/archives/page/5/'"><i
                                     class="icon-arrow-ios-forward-outline"></i>&#x4E0B;&#x4E00;&#x9875;</span>
                                                 
                             </div>
@@ -393,6 +406,13 @@
                                 var entries = ([
                                     
                                      {
+                                        label: '🏷编程',
+                                        url: 'https://blog.itjoker.cn/tag/nPlAK5Qaq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
                                         label: '🏷安全',
                                         url: 'https://blog.itjoker.cn/tag/VY0G11VFN/',
                                         target: '_button'
@@ -402,13 +422,6 @@
                                      {
                                         label: '🏷python',
                                         url: 'https://blog.itjoker.cn/tag/81tJcrhWN/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷编程',
-                                        url: 'https://blog.itjoker.cn/tag/nPlAK5Qaq/',
                                         target: '_button'
                                     },
                                     
@@ -669,7 +682,9 @@ App.recallMemory();
                             setInterval(show_date_time, 1000, buildTime);
                         </script>
                         
-                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <a href="https://blog.itjoker.cn">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
                             <script>
                                 var date = new Date();
                                 data2 = new Date(buildTime.replace(/-/g, "/"));
@@ -710,6 +725,8 @@ App.recallMemory();
         
         App.weather();
         
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
         App.clearLog();
         App.outputlog();
         var logo = '%c💤ITJoker\'%cBlog';

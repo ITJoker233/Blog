@@ -1,3 +1,6 @@
+cssText = 'filter: invert(80%) sepia(30%) !important;';
+mediaCssText = 'filter: invert(1) !important;';
+
 function CreateElementForExecCommand(textToClipboard) {
     var forExecElement = document.createElement("div");
     forExecElement.style.position = "absolute";
@@ -132,17 +135,26 @@ App = {
         var themeIcon = document.getElementById("themeIcon");
         const currentTheme = window.localStorage.getItem('theme');
         if (currentTheme == 'light') {
-            document.getElementsByTagName('html')[0].classList.add('theme-dark');
             themeIcon.classList.remove('Card-moon');
             themeIcon.classList.add('Card-sun');
             window.localStorage.setItem('theme', 'dark');
+            imgList = document.getElementsByTagName('img');
+            for (let i = 0; i < imgList.length; i++) {
+                imgList[i].style.cssText = mediaCssText;
+            }
+            document.documentElement.style.cssText = cssText;
+            document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
         } else {
-            document.getElementsByTagName('html')[0].classList.remove('theme-dark');
             themeIcon.classList.remove('Card-sun');
             themeIcon.classList.add('Card-moon');
             window.localStorage.setItem('theme', 'light');
+            imgList = document.getElementsByTagName('img');
+            for (let i = 0; i < imgList.length; i++) {
+                imgList[i].style.cssText = '';
+            }
+            document.documentElement.style.cssText = '';
+            document.getElementsByClassName('card-bg')[0].style.cssText = '';
         }
-        //location.reload();
     }
 }
 App.mouseEvent();

@@ -21,7 +21,7 @@
 <meta name="keywords" content="ITJoker,Blog,ITJoker&#39;sBlog,Peerless">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1619948022006">
+<meta name="UpdateTime" content="1653477937058">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -44,15 +44,28 @@
 <script>
     $().ready(
         function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
             var themeIcon = document.getElementById("themeIcon");
             var currentTheme = window.localStorage.getItem('theme');
             if (currentTheme == 'dark') {
-                document.getElementsByTagName('html')[0].classList.add('theme-dark');
-                document.getElementsByTagName('html')[0].removeAttribute('id');
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
                 themeIcon.classList.remove('Card-moon');
                 themeIcon.classList.add('Card-sun');
             } else {
-                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
                 document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
                 themeIcon.classList.remove('Card-sun');
                 themeIcon.classList.add('Card-moon');
@@ -224,13 +237,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1619948022006" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1653477937058" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1619948022006" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1653477937058" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -297,7 +310,7 @@
                         <div class="card-bg"></div>
                         <div class="card-info">
                             
-                                <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" style="height: 100px;">
+                                <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" style="height: 100px;">
                                 
                                         <span class="card-info-block card-info-name">💤ITJoker&nbsp;<i
                                 class="Card Card-certify"></i></span>
@@ -344,12 +357,56 @@
                 <div id="main-part">
                     <ul class="posts-list">
                         
+    <li class="lite-item" id="btnStyle" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;" onclick="javascript:top.location='https://blog.itjoker.cn/post/LQmQeQqsZ/'">
+        <article class="post post-type">
+            <header class="post-type-header">
+                <div class="post-relative">
+                    
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        
+                                <span class="post-type-author">
+                    💤ITJoker
+                    <i class="Card Card-certify"></i><span class="publish-time"> - <i class="fa fa-calendar"
+                            aria-hidden="true"></i> 2019-09-16</span>
+                                </span>
+                                <h3 class="post-type-title">
+                                    <a href="https://blog.itjoker.cn/post/LQmQeQqsZ/" rel="bookmark" title="关于3.5寸屏幕校准问题">
+                                        
+                                                关于3.5寸屏幕校准问题
+                                    </a>
+                                </h3>
+                </div>
+            </header>
+            <div class="post-main post-type-main">
+                <div class="post-content">
+                    <div class="post-tag"></div>
+                    <div class="post-excerpt">
+                        
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                    
+                    </div>
+                    <div class="post-category">
+                        
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            
+                                <a href="https://blog.itjoker.cn/tag/MT4rO6Mtf/" rel="category">
+                                    Raspberry
+                                        
+                                </a>
+                                
+                                    
+                    </div>
+                </div>
+            </div>
+        </article>
+    </li>
+    
     <li class="lite-item" id="btnStyle" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;" onclick="javascript:top.location='https://blog.itjoker.cn/post/YqHc8Ce_N/'">
         <article class="post post-type">
             <header class="post-type-header">
                 <div class="post-relative">
                     
-                        <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
                         
                                 <span class="post-type-author">
                     💤ITJoker
@@ -400,7 +457,7 @@
             <header class="post-type-header">
                 <div class="post-relative">
                     
-                        <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
                         
                                 <span class="post-type-author">
                     💤ITJoker
@@ -456,7 +513,7 @@
             <header class="post-type-header">
                 <div class="post-relative">
                     
-                        <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
                         
                                 <span class="post-type-author">
                     💤ITJoker
@@ -514,7 +571,7 @@
             <header class="post-type-header">
                 <div class="post-relative">
                     
-                        <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
                         
                                 <span class="post-type-author">
                     💤ITJoker
@@ -558,7 +615,7 @@
             <header class="post-type-header">
                 <div class="post-relative">
                     
-                        <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
                         
                                 <span class="post-type-author">
                     💤ITJoker
@@ -609,7 +666,7 @@
             <header class="post-type-header">
                 <div class="post-relative">
                     
-                        <img alt="💤ITJoker" src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
+                        <img alt="💤ITJoker" src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png" srcset="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/pic/avatar.png " class="avatar" width="100" height="100">
                         
                                 <span class="post-type-author">
                     💤ITJoker
@@ -658,10 +715,10 @@
                     </ul>
                     <div class="lite-item">
                         
-                            <span id="btnStyle" style="display: inline-block;width: 50%;text-align: center;border-right: 1px solid#e3e8e8;font-size: 14px;float: left;padding: 15px;" onclick="javascript:top.location='https://blog.itjoker.cn/page/2/'"> &#x4E0A;&#x4E00;&#x9875;</span>
+                            <span id="btnStyle" style="display: inline-block;width: 50%;text-align: center;font-size: 14px;float: left;padding: 15px;border-top-left-radius: 5px;" onclick="javascript:top.location='https://blog.itjoker.cn/page/2/'"> &#x4E0A;&#x4E00;&#x9875;</span>
                             
                                     
-                                            <span style="display: inline-block;width: 50%;text-align: center;border-right: 1px solid#e3e8e8;font-size: 14px;padding: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span style="display: inline-block;width: 50%;text-align: center;font-size: 14px;padding: 15px;border-top-right-radius: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                             
                     </div>
                 </div>
@@ -704,6 +761,13 @@
                                 var entries = ([
                                     
                                      {
+                                        label: '🏷编程',
+                                        url: 'https://blog.itjoker.cn/tag/nPlAK5Qaq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
                                         label: '🏷安全',
                                         url: 'https://blog.itjoker.cn/tag/VY0G11VFN/',
                                         target: '_button'
@@ -713,13 +777,6 @@
                                      {
                                         label: '🏷python',
                                         url: 'https://blog.itjoker.cn/tag/81tJcrhWN/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷编程',
-                                        url: 'https://blog.itjoker.cn/tag/nPlAK5Qaq/',
                                         target: '_button'
                                     },
                                     
@@ -980,7 +1037,9 @@ App.recallMemory();
                             setInterval(show_date_time, 1000, buildTime);
                         </script>
                         
-                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <a href="https://blog.itjoker.cn">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
                             <script>
                                 var date = new Date();
                                 data2 = new Date(buildTime.replace(/-/g, "/"));
@@ -1021,6 +1080,8 @@ App.recallMemory();
         
         App.weather();
         
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
         App.clearLog();
         App.outputlog();
         var logo = '%c💤ITJoker\'%cBlog';

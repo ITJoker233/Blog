@@ -309,22 +309,20 @@
                     <article class="post post-type real-post">
                         <header class="post-type-header">
                             
-                                <div class="thumbnail-link" style="background-image: url('https://open.saintic.com/api/bingPic/')"></div>
-                                
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
                                         <div class="thumbnail-shadow">
                                             <h1 class="post-title">
-                                                给树莓派换源，加快更新软件的速度~
+                                                【Python】QQ查IP工具
                                             </h1>
                                             <div class="post-info">
                                                 <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            <span onclick="javascript:top.location='https://blog.itjoker.cn/tag/MT4rO6Mtf/'">Raspberry</span>
-                                                
                                                     </span>
                                                     <span class="post-view">
                                                     
                                                         &nbsp;•&nbsp;
-                                                    <span id="/post/07jUaFw0O/" class="leancloud_visitors" data-flag-title="给树莓派换源，加快更新软件的速度~">
+                                                    <span id="/post/pqXvSK942/" class="leancloud_visitors" data-flag-title="【Python】QQ查IP工具">
                                                 <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
                                                 <i class="leancloud-visitors-count">0</i>
                                             </span>
@@ -333,54 +331,154 @@
                                                             </span>&nbsp;•&nbsp;
 
                                                             <span class="post-readtime">阅读时间:
-                                            2.0分</span>
+                                            3.9分</span>
                                                             <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
                                             <img alt="💤ITJoker" src="https://blog.itjoker.cn/images/avatar.png?v=1653477937058" srcset="https://blog.itjoker.cn/images/avatar.png?v=1653477937058" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://blog.itjoker.cn" title="由💤ITJoker发布" rel="author">💤ITJoker<i class="Card Card-certify"></i></a></span>
-                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2019-05-10</span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2022-04-13</span>
                                         </div>
                         </header>
                         <div class="post-main post-type-main">
                             <div class="post-content">
                                 <div class="post-content-real">
-                                    <p>当树莓派安装好系统时，可能会发现下载软件的速度十分缓慢，这个问题主要是因为系统默认的软件源是国外的官方源。我们可以通过更换软件源来解决这个问题。<br></p>
-<h1 id="首先打开树莓派的-终端-可以通过ssh或者显示器连接树莓派br">首先，打开树莓派的 终端 。(可以通过SSH或者显示器连接树莓派)<br></h1>
-<h2 id="树莓派的软件源配置文件有两个分别是和strongraspiliststrong和strongsourcesliststrong-br我们首先来更改位于etcapt下的strongsourcesliststrong文件">树莓派的软件源配置文件有两个，分别是和<strong>raspi.list</strong>和<strong>sources.list</strong>。<br><br>
-我们首先来更改位于/etc/apt/下的<strong>sources.list</strong>文件。</h2>
-<h2 id="输入以下命令来编辑strongsourcesliststrong">输入以下命令来编辑<strong>sources.list</strong></h2>
-<pre><code class="language-bash">sudo nano /etc/apt/sources.list 
+                                    <blockquote>
+<p>根据wireshark分析可知，通过分析qq语音通话，发现采用的是dup协议（应该是叫这个）<br>
+检测数据包的标志<code>020048</code>即可<br>
+需要<strong>pypacp</strong>这个库，但是python3 的环境下，推荐<strong>pacp-ct</strong><br>
+具体缺啥库就安装啥....</p>
+</blockquote>
+<pre><code class="language-python">import psutil,netaddr,pcap,dpkt
+import time
+import platform
+import binascii
+ 
+if 'Windows' in platform.platform():
+    import winreg as wr
+
+FINGERPRINT = {
+    'qq.exe':('udp','020048'),
+    'tim.exe':('udp','020048')
+}
+
+IF_REG = r'SYSTEM\CurrentControlSet\Control\Network\{4d36e972-e325-11ce-bfc1-08002be10318}'
+
+def get_interface_name(name):
+    reg = wr.ConnectRegistry(None, wr.HKEY_LOCAL_MACHINE)
+    reg_key = wr.OpenKey(reg, IF_REG)
+    for i in range(wr.QueryInfoKey(reg_key)[0]):
+        subkey_name = wr.EnumKey(reg_key, i)
+        try:
+            reg_subkey = wr.OpenKey(reg_key, subkey_name + r'\Connection')
+            Name = wr.QueryValueEx(reg_subkey, 'Name')[0]
+            wr.CloseKey(reg_subkey)
+            if Name == name:
+                return r'\Device\NPF_' + subkey_name
+        except FileNotFoundError as e:
+            pass
+ 
+    return None
+
+if 'Windows' in platform.platform():
+    iface = get_interface_name('Router') # WLAN
+else:
+    iface = 'enp2s0'
+
+
+def get_pid_sessions(is_show=True):
+    sessions = {}
+    for session in psutil.net_connections(kind=&quot;all&quot;):
+        if session.laddr and session.raddr:
+            pid               = session.pid                                                                                                  #进程pid
+            pid_name          = psutil.Process(int(pid)).name().lower()                                                                      #进程名
+            pid_create_time   = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;,time.localtime(psutil.Process(int(pid)).create_time()))                    #进程创建时间
+
+            src_ip               = session.laddr.ip                                                                                          #源IP
+            sport             = session.laddr.port                                                                                           #源端口
+            des_ip               = session.raddr.ip                                                                                          #目的IP
+            dport             = session.raddr.port                                                                                           #目的端口
+            status            = session.status                                                                                               #会话状态
+
+            filter_des_ip        = netaddr.IPAddress(des_ip)                                                                                             #格式化目的IP地址，用于后续判断是否是公网IP
+            filter_src_ip        = netaddr.IPAddress(src_ip)
+            if not filter_des_ip.is_private() and filter_des_ip.is_unicast() and not filter_des_ip.is_link_local() and not filter_src_ip.is_loopback():        #判断目的IP不是私网IP，是一个单播地址，不是linklocal地址，如果符合条件就记录  
+                if pid_name not in sessions:
+                    sessions[pid_name] = {}
+                if pid not in sessions[pid_name]:
+                    sessions[pid_name][pid] = {}
+                if f'{src_ip}:{sport}' not in sessions[pid_name][pid]:
+                    sessions[pid_name][pid][f'{src_ip}:{sport}'] = {}
+                if f'{des_ip}:{dport}' not in sessions[pid_name][pid][f'{src_ip}:{sport}']:
+                    sessions[pid_name][pid][f'{src_ip}:{sport}'][f'{des_ip}:{dport}'] = {
+                        'create_time':'',
+                        'status':''
+                    }
+                sessions[pid_name][pid][f'{src_ip}:{sport}'][f'{des_ip}:{dport}']['status'] = status
+                sessions[pid_name][pid][f'{src_ip}:{sport}'][f'{des_ip}:{dport}']['create_time'] = pid_create_time
+                if is_show:
+                    print(f'[{pid_create_time}]  [{pid}]    [{pid_name}]   [{src_ip}:{sport}] ---&gt; [{des_ip}:{dport}] ---- [{status}]')
+    return sessions
+
+def sniffer(pname):
+    transport   = FINGERPRINT[pname][0]
+    fingerprint = FINGERPRINT[pname][1]
+    pc = pcap.pcap(iface, promisc=True, immediate=True)
+    pc.setfilter(transport)
+    if transport.lower() == 'tcp':
+        check_transport = dpkt.tcp.TCP
+    else:
+        check_transport = dpkt.udp.UDP
+    for timestamp, raw_buf in pc:
+        eth = dpkt.ethernet.Ethernet(raw_buf)
+        
+        if not isinstance(eth.data, dpkt.ip.IP):
+            continue
+        df = bool(eth.data.off &amp; dpkt.ip.IP_DF)
+        mf = bool(eth.data.off &amp; dpkt.ip.IP_MF)
+        offset = eth.data.off &amp; dpkt.ip.IP_OFFMASK
+        traffic = eth.data.data
+        if not isinstance(traffic,check_transport):
+            continue
+        if not len(traffic.data):
+            continue
+        packet =  {
+            'time':time.strftime('%Y-%m-%d %H:%M:%S',(time.localtime(timestamp))),
+            'src':'%d.%d.%d.%d'%tuple(eth.data.src), 
+            'dst':'%d.%d.%d.%d'%tuple(eth.data.dst),
+            'protocol':eth.data.p, 
+            'len':eth.data.len, 
+            'ttl':eth.data.ttl,
+            'df':df, 
+            'mf':mf, 
+            'offset':offset, 
+            'checksum':eth.data.sum,
+            'traffic':binascii.b2a_hex(traffic.data).decode()
+        }
+        if packet['traffic'].startswith(fingerprint):
+            print()
+            for key in packet:
+                length = len(key)
+                ins_space_left  = ''
+                ins_space_right = ''
+                if length &lt; 8:
+                    ins_space_left  = ' ' * int((8-length)/2)
+                    if length % 2:
+                        ins_space_right = ' '* int((8-length)/2+1)
+                    else:
+                        ins_space_right = ' '* int((8-length)/2)
+                print(f'[ {pname} ] [ {ins_space_left}{key}{ins_space_right} ] ----&gt; {packet[key]}')
+        else:
+            print('\r[%s]  No capture!' %time.strftime('%Y-%m-%d %H:%M:%S',(time.localtime(time.time()))),end='')
+
+if __name__ == &quot;__main__&quot;:
+    sessions = get_pid_sessions(False)
+    pid_names = FINGERPRINT.keys()
+    for pname in pid_names:
+        if pname in sessions:
+            sniffer(pname=pname)
+            break
 </code></pre>
-<h2 id="br默认的文件内容是可能会有不一样的地方-不影响"><br><br>
-默认的文件内容是（可能会有不一样的地方 不影响):</h2>
-<pre><code class="language-bash">deb http://raspbian.raspberrypi.org/raspbian/ stretch main contrib non-free rpi 
-# Uncomment line below then apt-get update to enable apt-get source
-#deb-src http://raspbian.raspberrypi.org/raspbian/ stretch main contrib non-free
-</code></pre>
-<p>直接在每一行最前面加上一个注释掉原来的内容。 国内有许多树莓派软件源，如清华，中科大等 这里以清华大学的为例。<br><br>
-在<strong>sources.list</strong>的最顶部添加以下内容。</p>
-<pre><code class="language-bash">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib 
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
-</code></pre>
-<h1 id="然后ctrl-x-保存-按y确认-回车再次确认">然后Ctrl +X 保存 按Y确认 回车再次确认。</h1>
-<h1 id="然后是-编辑strongraspiliststrong">然后是 编辑<strong>raspi.list</strong></h1>
-<pre><code class="language-bash">sudo nano /etc/apt/sources.list.d/raspi.list
-</code></pre>
-<h1 id="同样把里面的内容全部按照刚才的方法注释掉">同样，把里面的内容全部按照刚才的方法注释掉。</h1>
-<h1 id="默认的文件内容是">默认的文件内容是:</h1>
-<pre><code class="language-bash">   deb http://archive.raspberrypi.org/debian/ stretch main ui
-   ## Uncomment line below then  apt-get update  to enable  apt-get source 
-   #deb-src http://archive.raspberrypi.org/debian/ stretch main ui 
-</code></pre>
-<h1 id="在strongraspiliststrong的最顶部添加以下内容">在<strong>raspi.list</strong>的最顶部添加以下内容。</h1>
-<pre><code class="language-bash">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ stretch main 
-</code></pre>
-<h1 id="同样strong-ctrlx-strong保存-按strongystrong确认-strong回车strong再次确认">同样<strong> Ctrl+X </strong>保存 按<strong>Y</strong>确认 <strong>回车</strong>再次确认</h1>
-<h1 id="修改完成后-我们要使这些更改生效-就必须要更新源">修改完成后 我们要使这些更改生效  就必须要更新源 。</h1>
-<pre><code class="language-bash">sudo apt-get update 
-</code></pre>
-<h1 id="更新完毕后-再尝试一下下载软件-就会发现速度比官方源快多了">更新完毕后 再尝试一下下载软件 就会发现速度比官方源快多了。</h1>
 
                                 </div>
                             </div>
@@ -398,8 +496,8 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
                             <div class="post-copyright">
                                 作者:
                                 💤ITJoker<br>永久链接:
-                                    <a href="https://blog.itjoker.cn/post/07jUaFw0O/" title="给树莓派换源，加快更新软件的速度~">
-                                        https://blog.itjoker.cn/post/07jUaFw0O/
+                                    <a href="https://blog.itjoker.cn/post/pqXvSK942/" title="【Python】QQ查IP工具">
+                                        https://blog.itjoker.cn/post/pqXvSK942/
                                     </a><br> 协议: MIT License
                             </div>
                         </div>
@@ -422,17 +520,10 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
                 </style>
                 <div class="lite-item nearby-article">
                     
-                        <div class="nearby-article-left" style="padding: 10px;">
-                            <a class="prev" rel="prev" href="https://blog.itjoker.cn/post/rVpAR2dmO/">
-                                <i class="fa fa-chevron-left"></i>
-                                记一次因学校公寓断网而去想绕过认证来达到上网，却发现一个很有意思的低级漏洞~
-                            </a>
-                        </div>
-                        
                             
                                 <div class="nearby-article-right" style="padding: 10px;">
-                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/wxMvtfkfT/">
-                                        闲着无聊 ~写了一个如何在控制台输出类似 P**** hub 的 Logo~2333<i class="fa fa-chevron-right"></i>
+                                    <a class="next" rel="next" href="https://blog.itjoker.cn/post/gHU4AfKAY/">
+                                        如何让小米路由4C刷上Openwrt20【教程】<i class="fa fa-chevron-right"></i>
                                     </a>
                                 </div>
                                 
@@ -441,9 +532,9 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-
                 <span style="margin-right:15px">
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
-                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/07jUaFw0O/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/07jUaFw0O/&sharesource=qzone&title=给树莓派换源，加快更新软件的速度~&pics=https://blog.itjoker.cn/images/avatar.png?v=1653477937058&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/07jUaFw0O/&sharesource=weibo&title=给树莓派换源，加快更新软件的速度~ + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1653477937058"><i class="fa fa-weibo "></i></a>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.itjoker.cn/post/pqXvSK942/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.itjoker.cn/post/pqXvSK942/&sharesource=qzone&title=【Python】QQ查IP工具&pics=https://blog.itjoker.cn/images/avatar.png?v=1653477937058&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://blog.itjoker.cn/post/pqXvSK942/&sharesource=weibo&title=【Python】QQ查IP工具 + " - " + &pic="https://blog.itjoker.cn/images/avatar.png?v=1653477937058"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             

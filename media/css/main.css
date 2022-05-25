@@ -471,6 +471,8 @@ textarea {
 .post-type-header .post-type-title {
     height: 26px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .post-type-header .post-type-author a,
